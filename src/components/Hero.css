@@ -1,12 +1,17 @@
+/* =========================================================
+   HERO SECTION — MASTER RESPONSIVE COMPOSITION
+   ========================================================= */
+
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: calc(100svh - 74px);
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 72px; /* Offset for sticky header */
+  padding-top: 74px; /* Offset for sticky header */
 }
 
+/* Background Image Layers */
 .hero-bg {
   position: absolute;
   top: 0;
@@ -14,15 +19,39 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center top;
   background-repeat: no-repeat;
   z-index: 1;
+}
+
+/* Mobile Background Crop Tuning */
+.mobile-bg {
+  display: block;
+  background-position: 68% center;
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+  .mobile-bg {
+    background-position: 68% center;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 390px) {
+  .mobile-bg {
+    background-position: 64% center;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 480px) {
+  .mobile-bg {
+    background-position: 62% center;
+  }
 }
 
 .desktop-bg {
   display: none;
 }
 
+/* Controlled Overlay: Text legibility + Priest visibility */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -31,43 +60,48 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(20, 5, 8, 0.88) 0%,
-    rgba(20, 5, 8, 0.72) 40%,
-    rgba(20, 5, 8, 0.45) 70%,
-    rgba(20, 5, 8, 0.85) 100%
+    rgba(28, 6, 10, 0.88) 0%,
+    rgba(28, 6, 10, 0.74) 40%,
+    rgba(28, 6, 10, 0.38) 72%,
+    rgba(18, 4, 7, 0.88) 100%
   );
   z-index: 2;
 }
 
+/* Hero Content Container (Normal Flow) */
 .hero-container {
   position: relative;
   z-index: 3;
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  padding: 1.5rem 1.25rem 3rem;
+  padding: 1.25rem 1rem 2.5rem;
 }
 
 .hero-content {
-  color: var(--clr-white);
-  max-width: 540px;
+  color: #FFFFFF;
   width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-/* Brand Emblem Header */
+/* 1. Brand Seal */
 .hero-brand-badge {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
+  max-width: 160px;
 }
 
 .hero-om-icon {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1;
   color: #E6C665;
-  text-shadow: 0 0 15px rgba(230, 198, 101, 0.6);
-  margin-bottom: 0.25rem;
+  text-shadow: 0 0 14px rgba(230, 198, 101, 0.6);
+  margin-bottom: 0.2rem;
   font-family: var(--font-serif);
 }
 
@@ -79,16 +113,16 @@
 
 .hero-brand-main {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  letter-spacing: 0.25em;
+  font-size: 1.05rem;
+  letter-spacing: 0.22em;
   font-weight: 700;
   color: #FFFFFF;
 }
 
 .hero-brand-sub {
   font-family: var(--font-serif);
-  font-size: 0.78rem;
-  letter-spacing: 0.35em;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
   color: #E6C665;
   font-weight: 600;
 }
@@ -96,46 +130,52 @@
 .hero-brand-divider {
   width: 100%;
   text-align: center;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   color: #E6C665;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
   letter-spacing: 0.2em;
 }
 
-/* Main Titles matching reference */
+/* 2. Main Title (Vaidika Seva) */
 .hero-title {
   display: flex;
   flex-direction: column;
   font-family: var(--font-serif);
-  font-size: clamp(3.2rem, 11vw, 5.2rem);
+  font-size: clamp(38px, 11.5vw, 54px);
   font-weight: 800;
-  line-height: 0.95;
+  line-height: 0.98;
   color: #FFFFFF;
-  margin-bottom: 1rem;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.85rem;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
   letter-spacing: -0.01em;
+  max-width: 320px;
 }
 
+.title-word {
+  display: block;
+}
+
+/* 3. Gold Tagline */
 .hero-tagline-box {
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
+  max-width: 320px;
 }
 
 .hero-tagline {
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 5vw, 1.8rem);
+  font-size: clamp(15px, 4.2vw, 19px);
   color: #E6C665;
   font-weight: 600;
   line-height: 1.25;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.45rem;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-ornament-line {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  max-width: 280px;
-  margin-bottom: 0.5rem;
+  gap: 0.6rem;
+  max-width: 240px;
 }
 
 .hero-ornament-line .line {
@@ -145,36 +185,39 @@
 }
 
 .hero-ornament-line .diamond {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: #E6C665;
 }
 
+/* 4. Short Description */
 .hero-desc {
-  font-size: 0.98rem;
+  font-size: 15px;
   line-height: 1.55;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.35rem;
   color: rgba(255, 255, 255, 0.92);
   font-weight: 400;
-  max-width: 480px;
+  max-width: 320px;
 }
 
-/* Profile Card matching image copy 9 */
+/* 5. Purohit Credential Card (Normal Flow) */
 .hero-profile-card {
-  background: linear-gradient(135deg, rgba(74, 14, 20, 0.92) 0%, rgba(45, 6, 10, 0.95) 100%);
-  border: 1.5px solid rgba(230, 198, 101, 0.6);
+  background: linear-gradient(135deg, rgba(68, 13, 19, 0.92) 0%, rgba(36, 5, 8, 0.95) 100%);
+  border: 1.5px solid rgba(230, 198, 101, 0.55);
   border-radius: 14px;
-  padding: 0.9rem 1.1rem;
-  margin-bottom: 1.6rem;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.35rem;
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  gap: 0.85rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 380px;
 }
 
 .hero-profile-avatar {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, #E6C665 0%, #B8860B 100%);
   display: flex;
@@ -182,63 +225,68 @@
   justify-content: center;
   color: #3E0C10;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero-profile-details {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.12rem;
+  overflow-wrap: break-word;
 }
 
 .purohit-name {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: #FFFFFF;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .purohit-name .degree {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #E6C665;
   font-weight: 600;
 }
 
 .purohit-univ {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.2;
 }
 
 .purohit-exp {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #E6C665;
   font-weight: 700;
   line-height: 1.2;
 }
 
-/* Actions */
+/* 6. CTA Action Buttons */
 .hero-actions {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 380px;
 }
 
 .hero-btn-book {
   background: linear-gradient(135deg, #7A1720 0%, #4D090E 100%);
   color: #FFFFFF;
   border: 1.5px solid rgba(230, 198, 101, 0.5);
-  border-radius: 12px;
-  padding: 0.95rem 1.5rem;
-  font-size: 1rem;
+  border-radius: 10px;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.95rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  min-height: 48px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   transition: all var(--transition-fast);
+  width: 100%;
 }
 
 .hero-btn-book:hover {
@@ -252,16 +300,18 @@
   background: linear-gradient(135deg, #F9E7B3 0%, #E6C665 50%, #CFA43B 100%);
   color: #2D060A;
   border: 1.5px solid #FDF0D5;
-  border-radius: 12px;
-  padding: 0.95rem 1.5rem;
-  font-size: 1rem;
+  border-radius: 10px;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.95rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  box-shadow: 0 6px 18px rgba(230, 198, 101, 0.35);
+  min-height: 48px;
+  box-shadow: 0 4px 14px rgba(230, 198, 101, 0.3);
   transition: all var(--transition-fast);
+  width: 100%;
 }
 
 .hero-btn-call:hover {
@@ -270,11 +320,13 @@
   color: #2D060A;
 }
 
-/* Desktop Styles */
+/* =========================================================
+   DESKTOP COMPOSITION (1024px+)
+   ========================================================= */
 @media (min-width: 1024px) {
   .hero {
-    min-height: 85vh;
-    padding-top: 90px;
+    min-height: 800px;
+    padding-top: 86px;
   }
   
   .mobile-bg {
@@ -289,10 +341,10 @@
   .hero-overlay {
     background: linear-gradient(
       90deg,
-      rgba(20, 5, 8, 0.95) 0%,
-      rgba(20, 5, 8, 0.85) 45%,
-      rgba(20, 5, 8, 0.4) 75%,
-      rgba(20, 5, 8, 0.1) 100%
+      rgba(20, 5, 8, 0.96) 0%,
+      rgba(20, 5, 8, 0.84) 42%,
+      rgba(20, 5, 8, 0.35) 72%,
+      rgba(20, 5, 8, 0.05) 100%
     );
   }
 
@@ -301,16 +353,44 @@
   }
 
   .hero-content {
-    max-width: 580px;
+    max-width: 560px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.8rem, 5.5vw, 5.2rem);
+    max-width: 500px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tagline-box {
+    max-width: 500px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.6rem;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-profile-card {
+    max-width: 460px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.75rem;
   }
 
   .hero-actions {
     flex-direction: row;
-    max-width: 480px;
+    max-width: 440px;
   }
 
   .hero-btn-book,
   .hero-btn-call {
     flex: 1;
+    width: auto;
   }
 }
