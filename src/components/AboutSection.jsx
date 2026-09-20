@@ -20,14 +20,12 @@ export default function AboutSection() {
 
         <div className="about-grid">
           <div className="about-image-wrapper animate-fade-up">
-          <img 
-              src="/assets/images/gallery-01.png" 
-              alt="Hari Anjaneya Abhishek Sharma - Vedic Purohit" 
-              className="about-image"
-            />
-            <div className="experience-badge">
-              <strong>16+</strong>
-              <span>Years Experience</span>
+            <div className="portrait-arch-frame">
+              <img
+                src="/assets/images/service-pooja.png"
+                alt="Hari Anjaneya Abhishek Sharma - Vedic Purohit, 16 Years Experience"
+                className="about-image"
+              />
             </div>
           </div>
 
