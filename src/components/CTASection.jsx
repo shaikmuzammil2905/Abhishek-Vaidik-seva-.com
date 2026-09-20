@@ -8,7 +8,7 @@ export default function CTASection() {
       <div className="container cta-container animate-fade-up">
         <div className="cta-om-badge">
           <span className="cta-om">ॐ</span>
-          <span className="cta-brand-tag">ABHISHEK VAIDIKA SEVA</span>
+          <span className="cta-brand-tag">VAIDIKA SEVA</span>
         </div>
 
         <h2 className="cta-title">

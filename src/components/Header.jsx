@@ -48,8 +48,7 @@ export default function Header() {
           <Link to="/" className="logo">
             <div className="logo-icon">ॐ</div>
             <div className="logo-text">
-              <span className="brand-name">ABHISHEK</span>
-              <span className="brand-sub">VAIDIKA SEVA</span>
+              <span className="brand-grand-title">VAIDIKA SEVA</span>
             </div>
           </Link>
 

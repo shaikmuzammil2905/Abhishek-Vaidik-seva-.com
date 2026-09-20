@@ -9,8 +9,7 @@ export default function Footer() {
           <Link to="/" className="footer-logo">
             <div className="footer-logo-icon">ॐ</div>
             <div className="footer-logo-text">
-              <span className="footer-brand-name">ABHISHEK</span>
-              <span className="footer-brand-sub">VAIDIKA SEVA</span>
+              <span className="footer-brand-grand">VAIDIKA SEVA</span>
             </div>
           </Link>
           <p className="footer-tagline">Vedokthamgaa Vishwasaneeyamga</p>
@@ -20,10 +19,10 @@ export default function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/#about">About</Link></li>
-            <li><Link to="/#services">Services</Link></li>
-            <li><Link to="/#gallery">Gallery</Link></li>
-            <li><Link to="/#contact">Contact</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
@@ -46,7 +45,7 @@ export default function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <p>© 2026 Abhishek Vaidika Seva. All Rights Reserved.</p>
+        <p>© 2026 Vaidika Seva. All Rights Reserved.</p>
       </div>
     </footer>
   );
