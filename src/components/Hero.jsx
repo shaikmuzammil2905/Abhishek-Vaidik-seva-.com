@@ -4,13 +4,13 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section className="hero">
-      {/* Mobile Background: High-res clean portrait image without baked-in text */}
+      {/* Mobile Background: Clean high-res image (image copy 20.png) without baked-in text */}
       <div 
         className="hero-bg mobile-bg" 
         style={{ backgroundImage: "url('/assets/images/hero-mobile.png')" }}
       ></div>
       
-      {/* Desktop Background: High-res clean wide cinematic image */}
+      {/* Desktop Background: Clean wide cinematic image (image copy 3.png) */}
       <div 
         className="hero-bg desktop-bg" 
         style={{ backgroundImage: "url('/assets/images/hero-desktop.png')" }}
@@ -20,24 +20,14 @@ export default function Hero() {
 
       <div className="container hero-container">
         <div className="hero-content">
-          {/* 1. Small Brand Seal */}
-          <div className="hero-brand-badge animate-fade-up">
-            <div className="hero-om-icon">ॐ</div>
-            <div className="hero-brand-text">
-              <span className="hero-brand-main">ABHISHEK</span>
-              <span className="hero-brand-sub">VAIDIKA SEVA</span>
-            </div>
-            <div className="hero-brand-divider"><span>◆</span></div>
-          </div>
-
-          {/* 2. Main H1 Heading */}
-          <h1 className="hero-title animate-fade-up animate-stagger-1">
+          {/* Main H1 Heading (Header already has logo - no duplicate logo mark) */}
+          <h1 className="hero-title animate-fade-up">
             <span className="title-word">Vaidika</span>
             <span className="title-word">Seva</span>
           </h1>
 
-          {/* 3. Gold Tagline */}
-          <div className="hero-tagline-box animate-fade-up animate-stagger-2">
+          {/* Gold Tagline */}
+          <div className="hero-tagline-box animate-fade-up animate-stagger-1">
             <p className="hero-tagline">Vedokthamgaa Vishwasaneeyamga</p>
             <div className="hero-ornament-line">
               <span className="line"></span>
@@ -46,13 +36,13 @@ export default function Hero() {
             </div>
           </div>
           
-          {/* 4. Short Description */}
-          <p className="hero-desc animate-fade-up animate-stagger-3">
+          {/* Short Description */}
+          <p className="hero-desc animate-fade-up animate-stagger-2">
             Authentic Vedic Poojas, Homams, Samskaras and Purohitha Seva performed with traditional Vedic procedures and devotion.
           </p>
 
-          {/* 5. Purohit Credential Card (Normal Document Flow) */}
-          <div className="hero-profile-card animate-fade-up animate-stagger-4">
+          {/* Purohit Credential Card (Normal Document Flow) */}
+          <div className="hero-profile-card animate-fade-up animate-stagger-3">
             <div className="hero-profile-avatar">
               <UserCheck size={24} className="avatar-icon" />
             </div>
@@ -65,20 +55,23 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* 6. CTA Action Buttons */}
-          <div className="hero-actions animate-fade-up">
+          {/* CTA Action Buttons */}
+          <div className="hero-actions animate-fade-up animate-stagger-4">
             <a href="#contact" className="btn hero-btn-book">
               <Calendar size={18} />
-              <span>Book Purohitham</span>
+              <span>BOOK PUROHITHAM</span>
               <ArrowRight size={16} className="arrow-icon" />
             </a>
             <a href="tel:+919177384384" className="btn hero-btn-call">
               <PhoneCall size={18} />
-              <span>Call Now</span>
+              <span>CALL NOW</span>
             </a>
           </div>
         </div>
       </div>
+
+      {/* Soft Rounded Lower Transition Edge */}
+      <div className="hero-lower-transition"></div>
     </section>
   );
 }
