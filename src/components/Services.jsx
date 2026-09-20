@@ -1,12 +1,20 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowRight, MessageCircle, ChevronDown, Sparkles } from 'lucide-react';
 import { servicesData } from '../data/services';
 import ServiceModal from './ServiceModal';
 import './Services.css';
 
 export default function Services() {
   const [modalService, setModalService] = useState(null);
+  const navigate = useNavigate();
+
+  const handleDropdownSelect = (e) => {
+    const selectedId = e.target.value;
+    if (selectedId) {
+      navigate(`/service/${selectedId}`);
+    }
+  };
 
   return (
     <section id="services" className="section-padding services-section">
@@ -16,6 +24,29 @@ export default function Services() {
           <p className="section-subtitle animate-fade-up animate-stagger-1">
             Complete Vedic Services for Every Occasion
           </p>
+
+          {/* Service Selector Dropdown */}
+          <div className="services-dropdown-container animate-fade-up animate-stagger-2">
+            <label htmlFor="service-select" className="dropdown-label">
+              <Sparkles size={16} className="sparkle-icon" /> Select a Service:
+            </label>
+            <div className="dropdown-select-wrapper">
+              <select 
+                id="service-select" 
+                className="services-select"
+                onChange={handleDropdownSelect}
+                defaultValue=""
+              >
+                <option value="" disabled>-- Choose a Vedic Service --</option>
+                {servicesData.map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {s.title}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown size={18} className="select-arrow" />
+            </div>
+          </div>
         </div>
 
         <div className="services-grid">
