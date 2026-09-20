@@ -25,26 +25,15 @@ export default function Header() {
     setServicesDropdownOpen(false);
   }, [location.pathname]);
 
-  // Handle smooth section scrolling for hash links
-  const handleNavClick = (sectionId) => {
-    setMobileMenuOpen(false);
-    setServicesDropdownOpen(false);
-
-    if (location.pathname === '/') {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate('/', { replace: false });
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 150);
-    }
-  };
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services', isDropdown: true },
+    { name: 'Pooja & Rituals', path: '/pooja-rituals' },
+    { name: 'Why Choose Us', path: '/why-choose-us' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   const handleServiceClick = (serviceId) => {
     setMobileMenuOpen(false);
@@ -67,73 +56,61 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="desktop-nav">
             <ul className="nav-list">
-              <li>
-                <Link to="/" className="nav-link">Home</Link>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('about')} className="nav-link nav-btn-link">
-                  About
-                </button>
-              </li>
-
-              {/* Desktop Services Dropdown */}
-              <li 
-                className="nav-dropdown-item"
-                onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
-              >
-                <button 
-                  onClick={() => handleNavClick('services')} 
-                  className="nav-link nav-btn-link dropdown-toggle"
-                >
-                  <span>Services</span>
-                  <ChevronDown size={15} />
-                </button>
-
-                {servicesDropdownOpen && (
-                  <div className="desktop-dropdown-menu">
-                    {servicesData.map((s) => (
-                      <button
-                        key={s.id}
-                        className="desktop-dropdown-link"
-                        onClick={() => handleServiceClick(s.id)}
+              {navItems.map((item) => {
+                if (item.isDropdown) {
+                  return (
+                    <li 
+                      key={item.name}
+                      className="nav-dropdown-item"
+                      onMouseEnter={() => setServicesDropdownOpen(true)}
+                      onMouseLeave={() => setServicesDropdownOpen(false)}
+                    >
+                      <Link 
+                        to={item.path} 
+                        className={`nav-link dropdown-toggle ${location.pathname === item.path ? 'active' : ''}`}
                       >
-                        <ChevronRight size={14} className="dropdown-item-icon" />
-                        <span>{s.title}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </li>
+                        <span>{item.name}</span>
+                        <ChevronDown size={15} />
+                      </Link>
 
-              <li>
-                <button onClick={() => handleNavClick('pooja')} className="nav-link nav-btn-link">
-                  Pooja &amp; Rituals
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('why-choose-us')} className="nav-link nav-btn-link">
-                  Why Choose Us
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('gallery')} className="nav-link nav-btn-link">
-                  Gallery
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('contact')} className="nav-link nav-btn-link">
-                  Contact
-                </button>
-              </li>
+                      {servicesDropdownOpen && (
+                        <div className="desktop-dropdown-menu">
+                          {servicesData.map((s) => (
+                            <Link
+                              key={s.id}
+                              to={`/service/${s.id}`}
+                              className="desktop-dropdown-link"
+                              onClick={() => setServicesDropdownOpen(false)}
+                            >
+                              <ChevronRight size={14} className="dropdown-item-icon" />
+                              <span>{s.title}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </li>
+                  );
+                }
+
+                return (
+                  <li key={item.name}>
+                    <Link 
+                      to={item.path} 
+                      className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
           <div className="header-actions desktop-actions">
-            <a href="tel:+919177384384" className="btn btn-primary">
+            <Link to="/contact" className="btn btn-primary">
               <PhoneCall size={18} />
               Book Purohitham
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -151,83 +128,70 @@ export default function Header() {
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-content">
           <ul className="mobile-nav-list">
-            <li>
-              <button onClick={() => handleNavClick('')} className="mobile-nav-link">
-                Home
-              </button>
-            </li>
-            <li>
-              <button onClick={() => handleNavClick('about')} className="mobile-nav-link">
-                About
-              </button>
-            </li>
+            {navItems.map((item) => {
+              if (item.isDropdown) {
+                return (
+                  <li key={item.name} className="mobile-dropdown-group">
+                    <div className="mobile-dropdown-header">
+                      <Link 
+                        to={item.path} 
+                        className="mobile-nav-link text-left"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <button 
+                        className="mobile-accordion-toggle"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setServicesDropdownOpen(!servicesDropdownOpen);
+                        }}
+                        aria-label="Toggle services list"
+                      >
+                        <ChevronDown size={22} className={`accordion-chevron ${servicesDropdownOpen ? 'rotated' : ''}`} />
+                      </button>
+                    </div>
 
-            {/* Mobile Services Submenu Accordion */}
-            <li className="mobile-dropdown-group">
-              <div className="mobile-dropdown-header">
-                <button 
-                  onClick={() => handleNavClick('services')} 
-                  className="mobile-nav-link text-left"
-                >
-                  Services
-                </button>
-                <button 
-                  className="mobile-accordion-toggle"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setServicesDropdownOpen(!servicesDropdownOpen);
-                  }}
-                  aria-label="Toggle services list"
-                >
-                  <ChevronDown size={22} className={`accordion-chevron ${servicesDropdownOpen ? 'rotated' : ''}`} />
-                </button>
-              </div>
+                    {/* All 10 Services List */}
+                    <div className={`mobile-submenu-list ${servicesDropdownOpen ? 'expanded' : ''}`}>
+                      <div className="submenu-title">
+                        <Sparkles size={14} /> All Vedic Services:
+                      </div>
+                      {servicesData.map((s) => (
+                        <Link
+                          key={s.id}
+                          to={`/service/${s.id}`}
+                          className="mobile-submenu-item"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <ChevronRight size={15} />
+                          <span>{s.title}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </li>
+                );
+              }
 
-              {/* All 10 Services List */}
-              <div className={`mobile-submenu-list ${servicesDropdownOpen ? 'expanded' : ''}`}>
-                <div className="submenu-title">
-                  <Sparkles size={14} /> All Vedic Services:
-                </div>
-                {servicesData.map((s) => (
-                  <button
-                    key={s.id}
-                    className="mobile-submenu-item"
-                    onClick={() => handleServiceClick(s.id)}
+              return (
+                <li key={item.name}>
+                  <Link 
+                    to={item.path} 
+                    className="mobile-nav-link"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    <ChevronRight size={15} />
-                    <span>{s.title}</span>
-                  </button>
-                ))}
-              </div>
-            </li>
-
-            <li>
-              <button onClick={() => handleNavClick('pooja')} className="mobile-nav-link">
-                Pooja &amp; Rituals
-              </button>
-            </li>
-            <li>
-              <button onClick={() => handleNavClick('why-choose-us')} className="mobile-nav-link">
-                Why Choose Us
-              </button>
-            </li>
-            <li>
-              <button onClick={() => handleNavClick('gallery')} className="mobile-nav-link">
-                Gallery
-              </button>
-            </li>
-            <li>
-              <button onClick={() => handleNavClick('contact')} className="mobile-nav-link">
-                Contact
-              </button>
-            </li>
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <div className="mobile-nav-footer">
-            <a href="tel:+919177384384" className="btn btn-primary w-full">
+            <Link to="/contact" className="btn btn-primary w-full" onClick={() => setMobileMenuOpen(false)}>
               <PhoneCall size={18} />
               Book Purohitham
-            </a>
+            </Link>
           </div>
         </div>
       </div>

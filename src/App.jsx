@@ -3,6 +3,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import MobileBottomBar from './components/MobileBottomBar';
 import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import PoojaPage from './pages/PoojaPage';
+import WhyChooseUsPage from './pages/WhyChooseUsPage';
+import GalleryPage from './pages/GalleryPage';
+import ContactPage from './pages/ContactPage';
 import ServiceDetail from './pages/ServiceDetail';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -15,6 +21,12 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/pooja-rituals" element={<PoojaPage />} />
+            <Route path="/why-choose-us" element={<WhyChooseUsPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/service/:serviceId" element={<ServiceDetail />} />
           </Routes>
         </main>
