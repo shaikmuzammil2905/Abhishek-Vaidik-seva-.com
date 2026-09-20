@@ -4,10 +4,10 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section className="hero">
-      {/* Mobile Background */}
+      {/* Mobile Background (Clean, high-res image without baked-in text) */}
       <div 
         className="hero-bg mobile-bg" 
-        style={{ backgroundImage: "url('/assets/images/img-copy-9.png')" }}
+        style={{ backgroundImage: "url('/assets/images/hero-mobile.png')" }}
       ></div>
       
       {/* Desktop Background */}

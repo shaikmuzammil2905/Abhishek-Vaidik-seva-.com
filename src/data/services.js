@@ -2,7 +2,7 @@ export const servicesData = [
   {
     id: 'pooja-services',
     title: 'Pooja Services',
-    image: '/assets/images/gallery-01.png',
+    image: '/assets/images/service-pooja.jpg',
     shortDesc: 'Daily and special poojas performed according to traditional Vedic practices.',
     intro: 'Pooja is the heart of Hindu devotional practice. At Abhishek Vaidika Seva, every pooja is conducted with meticulous adherence to Vedic scriptures, ensuring that the divine blessings flow freely to the devotees.',
     significance: 'Pooja creates a sacred connection between the devotee and the deity. It purifies the mind, body, and soul, and brings peace, prosperity, and divine grace into the household.',
@@ -46,7 +46,7 @@ export const servicesData = [
   {
     id: 'samskaras',
     title: 'Samskaras',
-    image: '/assets/images/service-satyanarayana.jpg',
+    image: '/assets/images/service-samskaras.jpg',
     shortDesc: 'Traditional Hindu samskaras and life-cycle ceremonies.',
     intro: 'Samskaras are the sacred rites of passage that mark important milestones in a Hindu\'s life. From birth to final rites, these ceremonies connect the individual to the divine and the community.',
     significance: 'Each Samskara purifies and sanctifies the individual at every stage of life. They are the spiritual foundation that shapes character, values, and one\'s connection to dharma.',
@@ -198,7 +198,7 @@ export const servicesData = [
   {
     id: 'other-sevas',
     title: 'Other Vedic Sevas',
-    image: '/assets/images/service-abhishekam.jpg',
+    image: '/assets/images/service-other-seva.jpg',
     shortDesc: 'Customized Vedic rituals based on the family\'s requirements and occasion.',
     intro: 'Beyond our standard services, we offer a wide range of customized Vedic rituals and sevas tailored to your family\'s specific needs, traditions, and occasions.',
     significance: 'Every family has unique spiritual needs and traditions. Our customized sevas ensure that your specific requirements are met with the same level of devotion and Vedic authenticity.',
