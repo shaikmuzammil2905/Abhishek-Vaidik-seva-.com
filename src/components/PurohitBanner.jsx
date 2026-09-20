@@ -6,18 +6,13 @@ export default function PurohitBanner() {
     <section className="purohit-banner">
       <div className="purohit-banner-overlay"></div>
       <div className="container purohit-banner-container">
-        <div className="purohit-portrait-col">
-          <div className="purohit-portrait-frame">
+        <div className="purohit-portrait-col animate-fade-up">
+          <div className="purohit-arch-card">
             <img
-              src="/assets/images/service-pooja.png"
-              alt="Hari Anjaneya Abhishek Sharma - Vedic Purohit portrait"
-              className="purohit-portrait-img"
+              src="/assets/images/img-copy-13.png"
+              alt="Hari Anjaneya Abhishek Sharma (B.A.) - 16 Years in Purohitham"
+              className="purohit-arch-img"
             />
-            <div className="portrait-badge">
-              <span className="badge-icon">🏅</span>
-              <strong>16 Years</strong>
-              <span>in Purohitham</span>
-            </div>
           </div>
         </div>
 

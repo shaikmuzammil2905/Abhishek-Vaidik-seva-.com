@@ -20,12 +20,17 @@ export default function AboutSection() {
 
         <div className="about-grid">
           <div className="about-image-wrapper animate-fade-up">
-            <div className="portrait-arch-frame">
-              <img
-                src="/assets/images/service-pooja.png"
-                alt="Hari Anjaneya Abhishek Sharma - Vedic Purohit, 16 Years Experience"
-                className="about-image"
-              />
+            <div className="about-portrait-grand-card">
+              <div className="about-portrait-inner">
+                <img
+                  src="/assets/images/img-copy-11.png"
+                  alt="Hari Anjaneya Abhishek Sharma (B.A.) - 16 Years in Purohitham"
+                  className="about-image-grand"
+                />
+                <div className="about-portrait-caption">
+                  <span className="caption-badge">🔱 16 Years in Purohitham</span>
+                </div>
+              </div>
             </div>
           </div>
 
