@@ -1,0 +1,173 @@
+.purohit-banner {
+  position: relative;
+  padding: 5rem 0;
+  background-image: url('/assets/images/hero-desktop.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.purohit-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(62, 39, 35, 0.95) 0%, rgba(94, 20, 26, 0.90) 100%);
+}
+
+.purohit-banner-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Portrait */
+.purohit-portrait-col {
+  display: flex;
+  justify-content: center;
+}
+
+.purohit-portrait-frame {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.purohit-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 6px solid var(--clr-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3), 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.portrait-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-gold);
+  color: var(--clr-maroon);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-size: 0.85rem;
+}
+
+.portrait-badge strong {
+  font-weight: 700;
+}
+
+/* Content */
+.purohit-banner-content {
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.banner-om {
+  font-size: 2rem;
+  color: var(--clr-gold);
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.purohit-banner-content h2 {
+  color: var(--clr-white);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.banner-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--clr-gold-light);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.banner-desc {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  font-size: 0.95rem;
+}
+
+.banner-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .purohit-banner-container {
+    grid-template-columns: 250px 1fr;
+    gap: 4rem;
+  }
+  
+  .purohit-portrait-frame {
+    width: 250px;
+    height: 320px;
+    border-radius: 12px;
+  }
+  
+  .purohit-portrait-img {
+    border-radius: 12px;
+    height: 100%;
+  }
+  
+  .portrait-badge {
+    bottom: -15px;
+  }
+  
+  .purohit-banner-content {
+    text-align: left;
+  }
+  
+  .banner-desc {
+    margin-left: 0;
+  }
+  
+  .banner-features {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .banner-actions {
+    justify-content: flex-start;
+  }
+}

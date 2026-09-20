@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Colors */
+  --clr-maroon: #5E141A;
+  --clr-brown-dark: #3E2723;
+  --clr-gold: #D4AF37;
+  --clr-gold-light: #EBD99F;
+  --clr-cream: #FDFBF7;
+  --clr-cream-dark: #F5F0E6;
+  --clr-white: #FFFFFF;
+  --clr-saffron: #FF9933;
+  --clr-saffron-subtle: #FFF0E0;
+  
+  --clr-text-main: #333333;
+  --clr-text-muted: #666666;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-gold: 0 4px 12px rgba(212, 175, 55, 0.2);
+
+  /* Transitions */
+  --transition-fast: 200ms ease-out;
+  --transition-normal: 400ms ease-out;
+  --transition-slow: 800ms ease-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--clr-text-main);
+  background-color: var(--clr-cream);
+  line-height: 1.6;
+  padding-bottom: 68px; /* Space for mobile bottom bar */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* Typography Utility */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--clr-maroon);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-up {
+    animation: fadeUp var(--transition-slow) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .animate-stagger-1 { animation-delay: 100ms; }
+  .animate-stagger-2 { animation-delay: 200ms; }
+  .animate-stagger-3 { animation-delay: 300ms; }
+  .animate-stagger-4 { animation-delay: 400ms; }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  min-height: 44px; /* Touch target */
+}
+
+.btn-primary {
+  background-color: var(--clr-maroon);
+  color: var(--clr-gold-light);
+  border: 1px solid var(--clr-maroon);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-brown-dark);
+  color: var(--clr-gold);
+}
+
+.btn-secondary {
+  background-color: var(--clr-cream);
+  color: var(--clr-brown-dark);
+  border: 1px solid var(--clr-gold);
+}
+
+.btn-secondary:hover {
+  background-color: var(--clr-gold-light);
+}
+
+/* Shared Classes */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--clr-gold);
+}
+
+.card {
+  background: var(--clr-white);
+  border: 1px solid var(--clr-gold-light);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--clr-gold);
+}
+
+/* Hidden Scrollbar for Carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

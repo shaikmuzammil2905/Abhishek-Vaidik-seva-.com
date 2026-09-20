@@ -1,0 +1,59 @@
+.contact-strip {
+  background-color: var(--clr-brown-dark);
+  padding: 1.5rem 0;
+  border-top: 3px solid var(--clr-gold);
+}
+
+.contact-strip-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.strip-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--clr-gold-light);
+  transition: color var(--transition-fast);
+}
+
+.strip-item:not(.no-link):hover {
+  color: var(--clr-gold);
+}
+
+.strip-item svg {
+  color: var(--clr-gold);
+  flex-shrink: 0;
+}
+
+.strip-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.strip-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.strip-item strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-white);
+}
+
+@media (min-width: 768px) {
+  .contact-strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-strip-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
