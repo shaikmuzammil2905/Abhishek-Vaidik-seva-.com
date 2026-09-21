@@ -4,7 +4,7 @@ export const servicesData = [
   // =======================================================================
   {
     id: 'homam-ganapathi',
-    name: 'Ganapathi Homam',
+    title: 'Ganapathi Homam',
     category: 'Homams',
     slug: 'ganapathi-homam',
     image: '/assets/images/services/homam-ganapathi.png',
@@ -16,7 +16,7 @@ export const servicesData = [
   },
   {
     id: 'homam-lakshmi-ganapathi',
-    name: 'Lakshmi Ganapathi Homam',
+    title: 'Lakshmi Ganapathi Homam',
     category: 'Homams',
     slug: 'lakshmi-ganapathi-homam',
     image: '/assets/images/services/homam-lakshmi-ganapathi.png',
@@ -28,7 +28,7 @@ export const servicesData = [
   },
   {
     id: 'homam-chandi',
-    name: 'Chandi Homam',
+    title: 'Chandi Homam',
     category: 'Homams',
     slug: 'chandi-homam',
     image: '/assets/images/services/homam-chandi.png',
@@ -40,7 +40,7 @@ export const servicesData = [
   },
   {
     id: 'homam-vana-durga',
-    name: 'Vana Durga Homam',
+    title: 'Vana Durga Homam',
     category: 'Homams',
     slug: 'vana-durga-homam',
     image: '/assets/images/services/homam-vana-durga.png',
@@ -52,7 +52,7 @@ export const servicesData = [
   },
   {
     id: 'homam-pratyangira',
-    name: 'Pratyangira Homam',
+    title: 'Pratyangira Homam',
     category: 'Homams',
     slug: 'pratyangira-homam',
     image: '/assets/images/services/homam-pratyangira.png',
@@ -64,7 +64,7 @@ export const servicesData = [
   },
   {
     id: 'homam-vaaraahi',
-    name: 'Vaaraahi Homam',
+    title: 'Vaaraahi Homam',
     category: 'Homams',
     slug: 'vaaraahi-homam',
     image: '/assets/images/services/homam-vaaraahi.png',
@@ -76,7 +76,7 @@ export const servicesData = [
   },
   {
     id: 'homam-sudarshana',
-    name: 'Sudarshana Homam',
+    title: 'Sudarshana Homam',
     category: 'Homams',
     slug: 'sudarshana-homam',
     image: '/assets/images/services/homam-sudarshana.png',
@@ -88,7 +88,7 @@ export const servicesData = [
   },
   {
     id: 'homam-mrutyunjaya',
-    name: 'Mrutyunjaya Homam',
+    title: 'Mrutyunjaya Homam',
     category: 'Homams',
     slug: 'mrutyunjaya-homam',
     image: '/assets/images/services/homam-mrutyunjaya.png',
@@ -100,7 +100,7 @@ export const servicesData = [
   },
   {
     id: 'homam-rudra',
-    name: 'Rudra Homam',
+    title: 'Rudra Homam',
     category: 'Homams',
     slug: 'rudra-homam',
     image: '/assets/images/services/homam-rudra.png',
@@ -112,7 +112,7 @@ export const servicesData = [
   },
   {
     id: 'homam-aayushya',
-    name: 'Aayushya Homam',
+    title: 'Aayushya Homam',
     category: 'Homams',
     slug: 'aayushya-homam',
     image: '/assets/images/services/homam-aayushya.png',
@@ -124,7 +124,7 @@ export const servicesData = [
   },
   {
     id: 'homam-navagraha',
-    name: 'Navagraha Homam',
+    title: 'Navagraha Homam',
     category: 'Homams',
     slug: 'navagraha-homam',
     image: '/assets/images/services/homam-navagraha.png',
@@ -136,7 +136,7 @@ export const servicesData = [
   },
   {
     id: 'homam-lakshmi-kubera',
-    name: 'Lakshmi Kubera Homam',
+    title: 'Lakshmi Kubera Homam',
     category: 'Homams',
     slug: 'lakshmi-kubera-homam',
     image: '/assets/images/services/homam-lakshmi-kubera.png',
@@ -148,7 +148,7 @@ export const servicesData = [
   },
   {
     id: 'homam-dhanvanthari',
-    name: 'Dhanvanthari Homam',
+    title: 'Dhanvanthari Homam',
     category: 'Homams',
     slug: 'dhanvanthari-homam',
     image: '/assets/images/services/homam-dhanvanthari.png',
@@ -165,7 +165,7 @@ export const servicesData = [
   // =======================================================================
   {
     id: 'pooja-ganapathi',
-    name: 'Ganapathi Pooja',
+    title: 'Ganapathi Pooja',
     category: 'Poojas',
     slug: 'ganapathi-pooja',
     image: '/assets/images/services/pooja-ganapathi.png',
@@ -177,7 +177,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-lakshmi',
-    name: 'Lakshmi Pooja',
+    title: 'Lakshmi Pooja',
     category: 'Poojas',
     slug: 'lakshmi-pooja',
     image: '/assets/images/services/pooja-lakshmi.png',
@@ -189,7 +189,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-varalakshmi-vratam',
-    name: 'Varalakshmi Vratam',
+    title: 'Varalakshmi Vratam',
     category: 'Poojas',
     slug: 'varalakshmi-vratam',
     image: '/assets/images/services/pooja-varalakshmi-vratam.png',
@@ -201,7 +201,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-mangala-gouri-vratam',
-    name: 'Mangala Gouri Vratam',
+    title: 'Mangala Gouri Vratam',
     category: 'Poojas',
     slug: 'mangala-gouri-vratam',
     image: '/assets/images/services/pooja-mangala-gouri-vratam.png',
@@ -213,7 +213,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-anantha-vratam',
-    name: 'Anantha Vratam',
+    title: 'Anantha Vratam',
     category: 'Poojas',
     slug: 'anantha-vratam',
     image: '/assets/images/services/pooja-anantha-vratam.png',
@@ -225,7 +225,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-anagha-vratham',
-    name: 'Anagha Vratham',
+    title: 'Anagha Vratham',
     category: 'Poojas',
     slug: 'anagha-vratham',
     image: '/assets/images/services/pooja-anagha-vratham.png',
@@ -237,7 +237,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-venkateshwara-kalyanam',
-    name: 'Venkateshwara Kalyanam',
+    title: 'Venkateshwara Kalyanam',
     category: 'Poojas',
     slug: 'venkateshwara-kalyanam',
     image: '/assets/images/services/pooja-venkateshwara-kalyanam.png',
@@ -249,7 +249,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-shiva-kalyanam',
-    name: 'Shiva Kalyanam',
+    title: 'Shiva Kalyanam',
     category: 'Poojas',
     slug: 'shiva-kalyanam',
     image: '/assets/images/services/pooja-shiva-kalyanam.png',
@@ -261,7 +261,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-subrahmanya-kalyanam',
-    name: 'Subrahmanya Kalyanam',
+    title: 'Subrahmanya Kalyanam',
     category: 'Poojas',
     slug: 'subrahmanya-kalyanam',
     image: '/assets/images/services/pooja-subrahmanya-kalyanam.png',
@@ -273,7 +273,7 @@ export const servicesData = [
   },
   {
     id: 'pooja-all-kalyanas',
-    name: 'All Kalyanas',
+    title: 'All Kalyanas',
     category: 'Poojas',
     slug: 'all-kalyanas',
     image: '/assets/images/services/pooja-all-kalyanas.png',
@@ -290,7 +290,7 @@ export const servicesData = [
   // =======================================================================
   {
     id: 'pitru-maasikam',
-    name: 'Maasikam',
+    title: 'Maasikam',
     category: 'Pitru Poojas',
     slug: 'maasikam',
     image: '/assets/images/services/pitru-maasikam.png',
@@ -302,7 +302,7 @@ export const servicesData = [
   },
   {
     id: 'pitru-shrardham',
-    name: 'Shrardham',
+    title: 'Shrardham',
     category: 'Pitru Poojas',
     slug: 'shrardham',
     image: '/assets/images/services/pitru-shrardham.png',
@@ -314,7 +314,7 @@ export const servicesData = [
   },
   {
     id: 'pitru-samvatsarikam',
-    name: 'Samvatsarikam',
+    title: 'Samvatsarikam',
     category: 'Pitru Poojas',
     slug: 'samvatsarikam',
     image: '/assets/images/services/pitru-samvatsarikam.png',
@@ -331,7 +331,7 @@ export const servicesData = [
   // =======================================================================
   {
     id: 'specialist-chandi',
-    name: 'Chandi',
+    title: 'Chandi',
     category: 'Specialist Vedic Services',
     slug: 'specialist-chandi',
     image: '/assets/images/services/specialist-chandi.png',
@@ -343,7 +343,7 @@ export const servicesData = [
   },
   {
     id: 'specialist-pratyangira',
-    name: 'Pratyangira',
+    title: 'Pratyangira',
     category: 'Specialist Vedic Services',
     slug: 'specialist-pratyangira',
     image: '/assets/images/services/specialist-pratyangira.png',
@@ -355,7 +355,7 @@ export const servicesData = [
   },
   {
     id: 'specialist-vaaraahi',
-    name: 'Vaaraahi',
+    title: 'Vaaraahi',
     category: 'Specialist Vedic Services',
     slug: 'specialist-vaaraahi',
     image: '/assets/images/services/specialist-vaaraahi.png',
@@ -367,7 +367,7 @@ export const servicesData = [
   },
   {
     id: 'specialist-rajashyamala',
-    name: 'Rajashyamala',
+    title: 'Rajashyamala',
     category: 'Specialist Vedic Services',
     slug: 'specialist-rajashyamala',
     image: '/assets/images/services/specialist-rajashyamala.png',
@@ -384,7 +384,7 @@ export const servicesData = [
   // =======================================================================
   {
     id: 'abhishekam-ekadasha-rudram',
-    name: 'Ekadasha Rudram',
+    title: 'Ekadasha Rudram',
     category: 'Abhishekams & Special Archanas',
     slug: 'ekadasha-rudram',
     image: '/assets/images/services/abhishekam-ekadasha-rudram.png',
@@ -396,7 +396,7 @@ export const servicesData = [
   },
   {
     id: 'abhishekam-shata-rudram',
-    name: 'Shata Rudram',
+    title: 'Shata Rudram',
     category: 'Abhishekams & Special Archanas',
     slug: 'shata-rudram',
     image: '/assets/images/services/abhishekam-shata-rudram.png',
@@ -408,7 +408,7 @@ export const servicesData = [
   },
   {
     id: 'abhishekam-mahaa-rudram',
-    name: 'Mahaa Rudram',
+    title: 'Mahaa Rudram',
     category: 'Abhishekams & Special Archanas',
     slug: 'mahaa-rudram',
     image: '/assets/images/services/abhishekam-mahaa-rudram.png',
@@ -420,7 +420,7 @@ export const servicesData = [
   },
   {
     id: 'abhishekam-athirudram',
-    name: 'Athirudram',
+    title: 'Athirudram',
     category: 'Abhishekams & Special Archanas',
     slug: 'athirudram',
     image: '/assets/images/services/abhishekam-athirudram.png',
