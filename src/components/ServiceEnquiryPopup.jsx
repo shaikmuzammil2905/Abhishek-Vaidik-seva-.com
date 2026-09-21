@@ -59,8 +59,7 @@ Message: ${formData.message}`;
           <X size={24} />
         </button>
         
-        <div className="popup-header">
-          <img src={service.image} alt={service.title} className="popup-service-img" />
+        <div className="popup-header" style={{ display: 'block', textAlign: 'center' }}>
           <div className="popup-service-info">
             <h3>{service.title} Enquiry</h3>
             <p>{service.shortDesc}</p>

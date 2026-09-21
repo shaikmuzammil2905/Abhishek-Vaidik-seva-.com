@@ -5,10 +5,10 @@
   backdrop-filter: blur(4px);
   z-index: 2000;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   animation: fadeIn 0.3s ease;
-  padding: 0;
+  padding: 1.25rem; /* give side gaps in all popups on mobile */
 }
 
 .modal-content {
@@ -16,7 +16,7 @@
   width: 100%;
   max-height: 90svh;
   overflow-y: auto;
-  border-radius: 16px 16px 0 0;
+  border-radius: 16px; /* round all corners */
   padding: 2rem 1.5rem;
   position: relative;
   animation: slideUp 0.3s ease;

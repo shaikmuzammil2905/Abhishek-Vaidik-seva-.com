@@ -64,10 +64,9 @@ export default function ServiceModal({ service, onClose }) {
       <div className="modal-content enquiry-modal" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} aria-label="Close"><X size={24} /></button>
 
-        <div className="modal-header">
-          <img src={service.image} alt={service.title} className="modal-service-image" />
+        <div className="modal-header" style={{ display: 'block', textAlign: 'center' }}>
           <div>
-            <h3>{service.title}</h3>
+            <h3 style={{ marginBottom: '0.25rem' }}>{service.title}</h3>
             <p className="modal-service-desc">{service.shortDesc}</p>
           </div>
         </div>
