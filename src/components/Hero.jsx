@@ -22,8 +22,8 @@ export default function Hero() {
         <div className="hero-content">
           {/* Main H1 Heading */}
           <h1 className="hero-title animate-fade-up">
-            <span className="title-word" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', wordBreak: 'break-word' }}>Vedokthamgaa</span>
-            <span className="title-word" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', wordBreak: 'break-word' }}>Vishwasaneeyamga</span>
+            <span className="title-word" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', wordBreak: 'break-word', textTransform: 'uppercase' }}>Vedokthamgaa</span>
+            <span className="title-word" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', wordBreak: 'break-word', textTransform: 'uppercase' }}>Vishwasaneeyamgaa</span>
           </h1>
           
           {/* Short Description */}
