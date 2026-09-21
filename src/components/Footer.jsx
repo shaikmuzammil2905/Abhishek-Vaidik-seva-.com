@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="footer" id="contact">
       <div className="container footer-container">
         <div className="footer-brand">
-          <Link to="/" className="footer-logo">
-            <div className="footer-logo-icon">ॐ</div>
+          <Link to="/" className="footer-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src="/assets/logo.png" alt="Abhishek Vaidika Seva" style={{ height: '40px', width: 'auto', marginRight: '10px' }} />
             <div className="footer-logo-text">
               <span className="footer-brand-grand">VAIDIKA SEVA</span>
             </div>

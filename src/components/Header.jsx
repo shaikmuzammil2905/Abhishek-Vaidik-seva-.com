@@ -46,7 +46,7 @@ export default function Header() {
       <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
         <div className="container header-container">
           <Link to="/" className="logo">
-            <div className="logo-icon">ॐ</div>
+            <img src="/assets/logo.png" alt="Abhishek Vaidika Seva" className="header-logo-image" style={{ height: '50px', width: 'auto', marginRight: '10px' }} />
             <div className="logo-text">
               <span className="brand-grand-title">VAIDIKA SEVA</span>
             </div>
@@ -74,15 +74,15 @@ export default function Header() {
 
                       {servicesDropdownOpen && (
                         <div className="desktop-dropdown-menu">
-                          {servicesData.map((s) => (
+                          {['Homams', 'Poojas', 'Pitru Poojas', 'Specialist Vedic Services', 'Abhishekams & Special Archanas'].map((cat) => (
                             <Link
-                              key={s.id}
-                              to={`/service/${s.id}`}
+                              key={cat}
+                              to={`/services?category=${encodeURIComponent(cat)}`}
                               className="desktop-dropdown-link"
                               onClick={() => setServicesDropdownOpen(false)}
                             >
                               <ChevronRight size={14} className="dropdown-item-icon" />
-                              <span>{s.title}</span>
+                              <span>{cat}</span>
                             </Link>
                           ))}
                         </div>
@@ -156,15 +156,15 @@ export default function Header() {
                       <div className="submenu-title">
                         <Sparkles size={14} /> All Vedic Services:
                       </div>
-                      {servicesData.map((s) => (
+                      {['Homams', 'Poojas', 'Pitru Poojas', 'Specialist Vedic Services', 'Abhishekams & Special Archanas'].map((cat) => (
                         <Link
-                          key={s.id}
-                          to={`/service/${s.id}`}
+                          key={cat}
+                          to={`/services?category=${encodeURIComponent(cat)}`}
                           className="mobile-submenu-item"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           <ChevronRight size={15} />
-                          <span>{s.title}</span>
+                          <span>{cat}</span>
                         </Link>
                       ))}
                     </div>

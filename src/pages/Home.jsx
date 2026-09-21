@@ -22,7 +22,7 @@ export default function Home() {
       <PoojaRituals />
       <WhyChooseUs />
       <ProcessSteps />
-      <Gallery />
+      <Gallery isPreview={true} />
       <CTASection />
       <ContactSection />
       <ContactStrip />

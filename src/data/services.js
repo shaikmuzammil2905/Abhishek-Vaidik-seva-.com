@@ -1,220 +1,563 @@
 export const servicesData = [
+  // HOMAMS
   {
-    id: 'pooja-services',
-    title: 'Pooja Services',
-    image: '/assets/images/service-pooja.jpg',
-    shortDesc: 'Daily and special poojas performed according to traditional Vedic practices.',
-    intro: 'Pooja is the heart of Hindu devotional practice. At Abhishek Vaidika Seva, every pooja is conducted with meticulous adherence to Vedic scriptures, ensuring that the divine blessings flow freely to the devotees.',
-    significance: 'Pooja creates a sacred connection between the devotee and the deity. It purifies the mind, body, and soul, and brings peace, prosperity, and divine grace into the household.',
+    id: 'ganapathi-homam',
+    category: 'Homams',
+    title: 'Ganapathi Homam',
+    slug: 'ganapathi-homam',
+    image: '/assets/images/services/homams/ganapathi-homam.webp',
+    shortDesc: 'Traditional Vedic Homam for Auspicious Beginnings and removing obstacles.',
+    intro: 'Ganapathi Homam is one of the most essential Vedic rituals, performed at the beginning of any new venture to invoke the blessings of Lord Ganesha, the remover of obstacles.',
+    significance: 'Performing Ganapathi Homam creates positive energy, removes impediments in professional and personal life, and ensures the successful completion of planned activities.',
     included: [
-      'Selection of auspicious muhurtham',
-      'Arrangement of pooja samagri',
-      'Vedic mantra chanting',
-      'Proper deity invocation procedures',
-      'Prasadam distribution guidance',
-      'Post-pooja guidelines'
-    ],
-    preparation: 'The devotee should prepare a clean pooja area, arrange fresh flowers, fruits, and other offerings. Specific requirements will be communicated before the pooja based on the type of ceremony.',
-    faq: [
-      { q: 'How long does a typical pooja take?', a: 'Duration varies from 1 to 3 hours depending on the type of pooja and the rituals involved.' },
-      { q: 'Do you bring the pooja materials?', a: 'We provide guidance on required materials. Specific samagri can be arranged upon request.' },
-      { q: 'Can the pooja be performed at my home?', a: 'Yes, most poojas can be performed at your residence or a location of your choice.' }
-    ]
-  },
-  {
-    id: 'homam',
-    title: 'Homam / Havan',
-    image: '/assets/images/service-homam.jpg',
-    shortDesc: 'Traditional fire rituals performed with appropriate Vedic procedures.',
-    intro: 'Homam is one of the most powerful Vedic rituals, involving the sacred fire as the medium to convey offerings to the deities. Our Homam services are performed with precise Vedic mantras and traditional procedures.',
-    significance: 'The sacred fire of Homam purifies the environment, removes negative energies, and invokes divine blessings. It is considered one of the most effective forms of worship in the Vedic tradition.',
-    included: [
-      'Homa kundam preparation',
-      'Sacred fire ritual with Vedic mantras',
-      'Specific offerings (ahutis)',
-      'Purnahuti (final offering)',
-      'Prasadam preparation',
-      'Post-homam purification'
-    ],
-    preparation: 'A suitable space for the homa kundam is required. Specific samagri and requirements will be communicated well in advance.',
-    faq: [
-      { q: 'What types of Homam do you perform?', a: 'We perform Ganapathi Homam, Navagraha Homam, Sudarshana Homam, Maha Mrityunjaya Homam, and many more.' },
-      { q: 'How much space is needed?', a: 'A minimum of 10x10 feet open or well-ventilated area is recommended for safe conduct of the Homam.' },
-      { q: 'Is Homam safe to perform indoors?', a: 'Homam can be performed indoors with proper ventilation. We ensure all safety measures are followed.' }
-    ]
-  },
-  {
-    id: 'samskaras',
-    title: 'Samskaras',
-    image: '/assets/images/service-samskaras.jpg',
-    shortDesc: 'Traditional Hindu samskaras and life-cycle ceremonies.',
-    intro: 'Samskaras are the sacred rites of passage that mark important milestones in a Hindu\'s life. From birth to final rites, these ceremonies connect the individual to the divine and the community.',
-    significance: 'Each Samskara purifies and sanctifies the individual at every stage of life. They are the spiritual foundation that shapes character, values, and one\'s connection to dharma.',
-    included: [
-      'Muhurtham selection',
-      'Complete ritual performance',
-      'Vedic mantra recitation',
-      'Traditional ceremony procedures',
-      'Family participation guidance',
-      'Cultural significance explanation'
-    ],
-    preparation: 'Preparation varies for each samskara. Detailed instructions including required materials and arrangements will be shared after consultation.',
-    faq: [
-      { q: 'How many samskaras are there?', a: 'The Vedic tradition prescribes 16 samskaras (Shodasha Samskaras), covering the entire journey of life.' },
-      { q: 'Can samskaras be combined?', a: 'Certain samskaras can be performed together based on tradition and family customs. We provide guidance on this.' }
-    ]
-  },
-  {
-    id: 'upanayanam',
-    title: 'Upanayanam',
-    image: '/assets/images/service-upanayanam.jpg',
-    shortDesc: 'Sacred thread ceremony and associated Vedic rituals.',
-    intro: 'Upanayanam is one of the most significant samskaras in the Hindu tradition. It marks the beginning of formal Vedic education and the acceptance of the sacred thread (Yagnopaveetham).',
-    significance: 'This ceremony symbolizes the spiritual rebirth of the child and the beginning of Brahmacharya (studentship). It is a pledge to uphold dharma, pursue knowledge, and serve the community.',
-    included: [
-      'Complete Upanayanam ceremony',
-      'Sacred thread investiture',
-      'Gayatri Mantra Upadesham',
-      'Brahmopadesham',
-      'Samidhaadanam',
-      'Bhiksha Vandanam',
-      'Post-ceremony guidance for daily Sandhyavandanam'
-    ],
-    preparation: 'The ceremony requires specific materials including the sacred thread, new clothes, and traditional items. A detailed list will be provided during consultation.',
-    faq: [
-      { q: 'At what age should Upanayanam be performed?', a: 'Traditionally, Upanayanam is performed between 7-12 years of age, though the exact age may vary by family tradition.' },
-      { q: 'How long does the ceremony take?', a: 'The complete Upanayanam ceremony typically takes 3-5 hours.' },
-      { q: 'Is Gayatri Mantra taught during the ceremony?', a: 'Yes, Gayatri Mantra Upadesham is a central part of the Upanayanam ceremony.' }
-    ]
-  },
-  {
-    id: 'vivaham',
-    title: 'Marriage / Vivaham',
-    image: '/assets/images/service-vivaham.jpg',
-    shortDesc: 'Traditional Hindu marriage rituals and associated ceremonies.',
-    intro: 'Vivaham is one of the most sacred and elaborate ceremonies in the Hindu tradition. It unites two souls in a bond blessed by the divine, witnessed by Agni (sacred fire), and upheld by dharma.',
-    significance: 'Marriage in the Vedic tradition is not merely a social contract but a spiritual union. The rituals invoke divine blessings for a harmonious, prosperous, and dharmic life together.',
-    included: [
-      'Muhurtham selection and matching',
-      'Vara Puja and Kanya Daanam',
-      'Mangala Sutra Dharanam',
-      'Saptapadi (Seven Sacred Steps)',
-      'Talambralu and associated rituals',
-      'Ashirvadam (Blessings)',
-      'Complete ceremony coordination'
-    ],
-    preparation: 'Detailed preparation is required including venue setup, ritual materials, and family coordination. We provide comprehensive guidance well in advance.',
-    faq: [
-      { q: 'How long does a Hindu wedding ceremony take?', a: 'The core ceremonies typically take 2-4 hours, depending on the traditions followed.' },
-      { q: 'Do you travel to different locations?', a: 'Yes, we are available to travel to various locations for wedding ceremonies.' },
-      { q: 'Can you perform weddings from different regional traditions?', a: 'We are well-versed in various regional wedding customs and can adapt the ceremonies accordingly.' }
-    ]
-  },
-  {
-    id: 'gruhapravesham',
-    title: 'Gruhapravesham',
-    image: '/assets/images/service-gruhapravesham.jpg',
-    shortDesc: 'Traditional Vedic rituals for entering a new home.',
-    intro: 'Gruhapravesham (house-warming ceremony) is a sacred Vedic ritual performed before entering a new home. It sanctifies the dwelling and invites divine energies to bless the household.',
-    significance: 'This ceremony removes negative energies, purifies the new space, and invokes the blessings of Vastu Purusha and household deities for peace, prosperity, and well-being of the family.',
-    included: [
-      'Ganapathi Pooja',
-      'Vastu Pooja and Shanti',
-      'Navagraha Pooja',
-      'Homa / Havan',
-      'Griha Pravesham ritual',
-      'Boiling of milk ceremony',
-      'Prasadam and celebrations'
-    ],
-    preparation: 'The new home should be clean and ready for occupation. Specific arrangements for the pooja area and materials will be communicated.',
-    faq: [
-      { q: 'Can Gruhapravesham be done for rented houses?', a: 'Yes, Gruhapravesham can be performed for any new residence, whether owned or rented.' },
-      { q: 'What is the ideal time for Gruhapravesham?', a: 'An auspicious muhurtham is selected based on the family\'s horoscope and the panchang.' }
-    ]
-  },
-  {
-    id: 'satyanarayana',
-    title: 'Satyanarayana Swamy Pooja',
-    image: '/assets/images/service-satyanarayana.jpg',
-    shortDesc: 'Traditional Satyanarayana Vratham and pooja services.',
-    intro: 'Sri Satyanarayana Swamy Pooja is one of the most popular and widely performed Vedic rituals. It is dedicated to Lord Vishnu in his form as Satyanarayana and is performed to seek His blessings.',
-    significance: 'This pooja is believed to bring prosperity, success, and fulfillment of wishes. It removes obstacles and brings harmony to the family.',
-    included: [
-      'Complete Satyanarayana Vratham',
-      'Pooja Vidhanam with proper mantras',
-      'Panchamruta Abhishekam',
-      'Prasadam preparation guidance',
-      'Katha Shravanam (Story reading)',
-      'Mangala Aarti'
-    ],
-    preparation: 'A clean pooja area with the deity photo or idol, along with required samagri. Full list provided during consultation.',
-    faq: [
-      { q: 'When is the best time to perform this pooja?', a: 'Pournami (full moon day) is traditionally considered auspicious, but it can be performed on any day with a good muhurtham.' },
-      { q: 'How long does the pooja take?', a: 'The complete Satyanarayana Swamy Pooja typically takes 2-3 hours.' }
-    ]
-  },
-  {
-    id: 'abhishekam',
-    title: 'Abhishekam',
-    image: '/assets/images/service-abhishekam.jpg',
-    shortDesc: 'Traditional deity abhishekam and related rituals.',
-    intro: 'Abhishekam is the sacred bathing of a deity idol with various auspicious substances. It is one of the most revered forms of worship, symbolizing the devotee\'s love and surrender.',
-    significance: 'Abhishekam purifies the deity\'s energy, enhances the spiritual vibrations of the space, and bestows divine grace upon the devotees. Each substance used carries unique spiritual significance.',
-    included: [
-      'Panchamruta Abhishekam',
-      'Rudra Abhishekam (for Shiva)',
-      'Various dravya abhishekam',
-      'Alankaram (Decoration)',
-      'Archana with sacred names',
-      'Mangala Aarti'
-    ],
-    preparation: 'Required substances include milk, curd, honey, ghee, sugar, and other items based on the type of abhishekam.',
-    faq: [
-      { q: 'Can Abhishekam be done at home?', a: 'Yes, Abhishekam can be performed at home with proper setup and a deity idol or Shiva Lingam.' },
-      { q: 'What types of Abhishekam are available?', a: 'We perform various types including Panchamruta, Rudra, Sahasranamam, and customized abhishekams.' }
-    ]
-  },
-  {
-    id: 'namakaranam',
-    title: 'Namakaranam',
-    image: '/assets/images/service-namakaranam.jpg',
-    shortDesc: 'Traditional naming ceremony.',
-    intro: 'Namakaranam is the Vedic naming ceremony performed for a newborn child. It is a joyous occasion where the child receives their name, chosen with spiritual significance and astrological alignment.',
-    significance: 'A name carries deep spiritual vibrations. The Namakaranam ceremony ensures that the child\'s name aligns with their birth star, planetary positions, and family traditions, setting a positive foundation for life.',
-    included: [
-      'Ganapathi Pooja',
-      'Name selection guidance based on Nakshatra',
-      'Naming ceremony rituals',
-      'Blessings and Ashirvadam',
-      'Cradle ceremony',
-      'Traditional celebrations'
-    ],
-    preparation: 'A clean and decorated area for the ceremony. Cradle for the baby, new clothes, and specific pooja materials.',
-    faq: [
-      { q: 'When should Namakaranam be performed?', a: 'Traditionally, it is performed on the 11th or 12th day after birth, but can also be done later based on convenience.' },
-      { q: 'Do you help with name selection?', a: 'Yes, we provide guidance on selecting an auspicious name based on the child\'s birth star and planetary positions.' }
-    ]
-  },
-  {
-    id: 'other-sevas',
-    title: 'Other Vedic Sevas',
-    image: '/assets/images/service-other-seva.jpg',
-    shortDesc: 'Customized Vedic rituals based on the family\'s requirements and occasion.',
-    intro: 'Beyond our standard services, we offer a wide range of customized Vedic rituals and sevas tailored to your family\'s specific needs, traditions, and occasions.',
-    significance: 'Every family has unique spiritual needs and traditions. Our customized sevas ensure that your specific requirements are met with the same level of devotion and Vedic authenticity.',
-    included: [
-      'Shanti Poojas',
+      'Ganapathi Avahanam',
       'Navagraha Shanti',
-      'Vastu Shanti',
-      'Pitru Karmas',
-      'Festival-specific poojas',
-      'Custom ritual consultation',
-      'And many more based on your needs'
+      'Sacred fire ritual with specific offerings',
+      'Purnahuti',
+      'Prasadam preparation guidance'
     ],
-    preparation: 'Requirements vary based on the specific seva. We provide complete guidance after understanding your needs.',
+    preparation: 'The devotee should prepare a clean area for the Homa kundam, arrange fresh flowers, fruits, Modakam (if possible), and other standard pooja offerings.',
     faq: [
-      { q: 'Can you customize a ritual for our specific need?', a: 'Absolutely. We consult with you to understand your requirements and design the appropriate Vedic ceremony.' },
-      { q: 'Do you perform sevas outside Secunderabad?', a: 'Yes, we are available to travel to various locations. Please contact us for details.' }
-    ]
+      { q: 'When is the best time for Ganapathi Homam?', a: 'Early morning (Brahma Muhurtham) is considered most auspicious, but it can be performed at any good muhurtham.' }
+    ],
+    featured: true
+  },
+  {
+    id: 'lakshmi-ganapathi-homam',
+    category: 'Homams',
+    title: 'Lakshmi Ganapathi Homam',
+    slug: 'lakshmi-ganapathi-homam',
+    image: '/assets/images/services/homams/lakshmi-ganapathi-homam.webp',
+    shortDesc: 'Invokes wealth and removes obstacles for complete prosperity.',
+    intro: 'Lakshmi Ganapathi Homam combines the blessings of Goddess Lakshmi (wealth) and Lord Ganesha (remover of obstacles), performed for holistic success and financial stability.',
+    significance: 'This Homam attracts auspiciousness, clears debts, and helps in business growth and financial abundance.',
+    included: [
+      'Lakshmi and Ganapathi Avahanam',
+      'Specific Ahutis (offerings) for wealth',
+      'Sacred mantras chanting'
+    ],
+    preparation: 'Clean pooja area, specific flowers (like lotus), traditional sweets, and sacred materials.',
+    faq: [
+      { q: 'Who should perform this Homam?', a: 'Business owners, individuals facing financial difficulties, or anyone seeking prosperity.' }
+    ],
+    featured: true
+  },
+  {
+    id: 'chandi-homam',
+    category: 'Homams',
+    title: 'Chandi Homam',
+    slug: 'chandi-homam',
+    image: '/assets/images/services/homams/chandi-homam.webp',
+    shortDesc: 'A powerful ritual to invoke Goddess Durga for victory and protection.',
+    intro: 'Chandi Homam is a highly specialized and powerful Vedic ritual invoking the supreme energy of the Divine Mother to overcome severe obstacles and negativities.',
+    significance: 'It bestows victory over enemies, removes profound doshas, and grants immense spiritual and material strength.',
+    included: [
+      'Durga Saptashati Parayanam',
+      'Navakshari Mantra Japa',
+      'Elaborate Homa rituals'
+    ],
+    preparation: 'Requires extensive preparation and strict adherence to purity. Detailed guidance provided during consultation.',
+    faq: [
+      { q: 'How long does Chandi Homam take?', a: 'It is a detailed ritual that can take several hours depending on the scale.' }
+    ],
+    featured: false
+  },
+  {
+    id: 'vanadurga-homam',
+    category: 'Homams',
+    title: 'Vanadurga Homam',
+    slug: 'vanadurga-homam',
+    image: '/assets/images/services/homams/vanadurga-homam.webp',
+    shortDesc: 'Invokes Goddess Vanadurga for protection against negative energies.',
+    intro: 'Vanadurga Homam is dedicated to the fierce form of Goddess Durga, who protects her devotees from unseen negative influences and enemies.',
+    significance: 'Highly effective in neutralizing black magic, evil eye (drishti), and establishing a protective shield around the family.',
+    included: ['Specific mantras for protection', 'Sacred fire offerings'],
+    preparation: 'Clean space and specific offerings as advised by the Purohit.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'pratyangira-homam',
+    category: 'Homams',
+    title: 'Pratyangira Homam',
+    slug: 'pratyangira-homam',
+    image: '/assets/images/services/homams/pratyangira-homam.webp',
+    shortDesc: 'A formidable ritual for ultimate protection and vanquishing strong foes.',
+    intro: 'Pratyangira Homam invokes Goddess Pratyangira to dispel the most stubborn negative energies, curses, and severe afflictions.',
+    significance: 'Provides a powerful spiritual armor and brings immense courage and peace of mind.',
+    included: ['Pratyangira Mantra Homa', 'Special protective offerings'],
+    preparation: 'Strict discipline is required; details provided upon booking.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'varahi-homam',
+    category: 'Homams',
+    title: 'Varahi Homam',
+    slug: 'varahi-homam',
+    image: '/assets/images/services/homams/varahi-homam.webp',
+    shortDesc: 'Invokes Goddess Varahi for courage, victory, and removal of drishti.',
+    intro: 'Varahi Homam seeks the blessings of Goddess Varahi, the commander of the divine mother\'s army, known for granting swift justice and protection.',
+    significance: 'Helps in resolving legal disputes, land issues, and protecting against accidents.',
+    included: ['Varahi Mantra Homa'],
+    preparation: 'Specific offerings will be advised.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'sudarshana-homam',
+    category: 'Homams',
+    title: 'Sudarshana Homam',
+    slug: 'sudarshana-homam',
+    image: '/assets/images/services/homams/sudarshana-homam.webp',
+    shortDesc: 'Invokes Lord Sudarshana for health, protection, and clearing karmic blocks.',
+    intro: 'Sudarshana Homam invokes the mighty weapon of Lord Vishnu to destroy ignorance, diseases, and enemies.',
+    significance: 'Purifies the mind and body, brings relief from chronic ailments, and provides deep spiritual cleansing.',
+    included: ['Sudarshana Mantra chanting', 'Homa rituals'],
+    preparation: 'Tulsi leaves and specific offerings are typically required.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'mrityunjaya-homam',
+    category: 'Homams',
+    title: 'Mrityunjaya Homam',
+    slug: 'mrityunjaya-homam',
+    image: '/assets/images/services/homams/mrityunjaya-homam.webp',
+    shortDesc: 'Dedicated to Lord Shiva for longevity and overcoming severe illnesses.',
+    intro: 'Maha Mrityunjaya Homam is a life-saving ritual performed to conquer death and disease, invoking the healing grace of Lord Shiva.',
+    significance: 'Bestows health, longevity, and peace, mitigating the fear of premature death.',
+    included: ['Maha Mrityunjaya Mantra Japa', 'Homa'],
+    preparation: 'A clean space, bilva leaves, and devotion.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'rudra-homam',
+    category: 'Homams',
+    title: 'Rudra Homam',
+    slug: 'rudra-homam',
+    image: '/assets/images/services/homams/rudra-homam.webp',
+    shortDesc: 'A powerful Homam for inner peace, purity, and fulfilling desires.',
+    intro: 'Rudra Homam involves the chanting of Sri Rudram, bringing immense peace, removing karmic impurities, and bestowing divine grace.',
+    significance: 'Helps in spiritual upliftment, overcoming deep-seated fears, and achieving harmony in life.',
+    included: ['Sri Rudra Prashna Parayanam', 'Homa'],
+    preparation: 'Specific offerings and a pure environment.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'ayushya-homam',
+    category: 'Homams',
+    title: 'Ayushya Homam',
+    slug: 'ayushya-homam',
+    image: '/assets/images/services/homams/ayushya-homam.webp',
+    shortDesc: 'Performed to ensure a long, healthy, and prosperous life, especially for children.',
+    intro: 'Ayushya Homam is traditionally performed on a child\'s first birthday (or any birthday) to invoke the Ayur Devata for longevity and health.',
+    significance: 'Removes health doshas from the birth chart and ensures the child\'s well-being.',
+    included: ['Ayushya Suktam chanting', 'Homa'],
+    preparation: 'New clothes for the child, sweet preparations.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'navagraha-homam',
+    category: 'Homams',
+    title: 'Navagraha Homam',
+    slug: 'navagraha-homam',
+    image: '/assets/images/services/homams/navagraha-homam.webp',
+    shortDesc: 'Pacifies the nine planets and removes astrological doshas.',
+    intro: 'Navagraha Homam is performed to appease the nine planetary deities, reducing their negative impacts and enhancing their positive influences in one\'s horoscope.',
+    significance: 'Brings balance, reduces obstacles in career and marriage, and mitigates the effects of bad planetary periods (Dashas/Bhuktis).',
+    included: ['Navagraha Mantra Homa', 'Specific offerings for each planet'],
+    preparation: 'Nine types of grains and specific colored clothes.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'lakshmi-kubera-homam',
+    category: 'Homams',
+    title: 'Lakshmi Kubera Homam',
+    slug: 'lakshmi-kubera-homam',
+    image: '/assets/images/services/homams/lakshmi-kubera-homam.webp',
+    shortDesc: 'Invokes Goddess Lakshmi and Lord Kubera for immense wealth and financial growth.',
+    intro: 'Lakshmi Kubera Homam is the ultimate ritual for attracting wealth, prosperity, and retaining it by the grace of the divine treasurer, Lord Kubera.',
+    significance: 'Helps in rapid business expansion, accumulating assets, and resolving financial crises.',
+    included: ['Lakshmi Kubera Mantra Homa'],
+    preparation: 'Specific offerings for wealth attraction.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'dhanvanthari-homam',
+    category: 'Homams',
+    title: 'Dhanvanthari Homam',
+    slug: 'dhanvanthari-homam',
+    image: '/assets/images/services/homams/dhanvanthari-homam.webp',
+    shortDesc: 'Invokes Lord Dhanvanthari, the divine physician, for excellent health.',
+    intro: 'Dhanvanthari Homam is performed to seek the blessings of Lord Dhanvanthari for curing chronic diseases and maintaining vibrant health.',
+    significance: 'Brings profound physical and mental healing energies.',
+    included: ['Dhanvanthari Mantra Homa'],
+    preparation: 'Specific herbs are offered in the fire.',
+    faq: [],
+    featured: false
+  },
+
+  // POOJAS
+  {
+    id: 'ganapathi-pooja',
+    category: 'Poojas',
+    title: 'Ganapathi Pooja',
+    slug: 'ganapathi-pooja',
+    image: '/assets/images/services/poojas/ganapathi-pooja.webp',
+    shortDesc: 'Fundamental pooja to seek Lord Ganesha’s blessings.',
+    intro: 'Ganapathi Pooja is the foundational worship in the Hindu tradition, ensuring any undertaking begins without hindrances.',
+    significance: 'Establishes a pure and positive environment before main ceremonies or new beginnings.',
+    included: ['Shodashopachara Pooja'],
+    preparation: 'Basic pooja samagri.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'lakshmi-pooja',
+    category: 'Poojas',
+    title: 'Lakshmi Pooja',
+    slug: 'lakshmi-pooja',
+    image: '/assets/images/services/poojas/lakshmi-pooja.webp',
+    shortDesc: 'Worship of Goddess Lakshmi for wealth and prosperity in the household.',
+    intro: 'Lakshmi Pooja is performed to invite the Goddess of Wealth into the home, ensuring harmony and abundance.',
+    significance: 'Brings financial stability and domestic peace.',
+    included: ['Lakshmi Ashtothram', 'Shodashopachara Pooja'],
+    preparation: 'Lotus flowers, sweets, and a clean environment.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'varalakshmi-vratam',
+    category: 'Poojas',
+    title: 'Varalakshmi Vratam',
+    slug: 'varalakshmi-vratam',
+    image: '/assets/images/services/poojas/varalakshmi-vratam.webp',
+    shortDesc: 'A sacred Vratam performed by married women for the well-being of the family.',
+    intro: 'Varalakshmi Vratam is a highly auspicious observance to seek the blessings of Goddess Lakshmi for the longevity of the husband and prosperity of the family.',
+    significance: 'Considered equivalent to worshipping all eight forms of Lakshmi (Ashta Lakshmi).',
+    included: ['Kalasha Sthapana', 'Vratam Katha'],
+    preparation: 'Elaborate preparation including Kalasham, new clothes, and traditional sweets.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'mangala-gouri-vratam',
+    category: 'Poojas',
+    title: 'Mangala Gouri Vratam',
+    slug: 'mangala-gouri-vratam',
+    image: '/assets/images/services/poojas/mangala-gouri-vratam.webp',
+    shortDesc: 'Worship of Goddess Gouri for marital bliss and longevity of the husband.',
+    intro: 'Performed typically during the month of Shravana, this Vratam invokes the blessings of Goddess Parvati (Gouri).',
+    significance: 'Ensures a happy and long married life.',
+    included: ['Gouri Pooja', 'Vratam rituals'],
+    preparation: 'Traditional items for Gouri pooja.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'anantha-vratam',
+    category: 'Poojas',
+    title: 'Anantha Vratam',
+    slug: 'anantha-vratam',
+    image: '/assets/images/services/poojas/anantha-vratam.webp',
+    shortDesc: 'Dedicated to Lord Anantha Padmanabha (Vishnu) for resolving endless troubles.',
+    intro: 'Anantha Vratam is performed to seek relief from sorrows and to gain the infinite blessings of Lord Vishnu.',
+    significance: 'Tying the sacred thread with 14 knots brings continuous prosperity and protection.',
+    included: ['Anantha Padmanabha Pooja', 'Sacred thread tying'],
+    preparation: 'Specific preparations for the Anantha Padmanabha swamy.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'anagha-vratam',
+    category: 'Poojas',
+    title: 'Anagha Vratam',
+    slug: 'anagha-vratam',
+    image: '/assets/images/services/poojas/anagha-vratam.webp',
+    shortDesc: 'Worship of Lord Dattatreya and Goddess Anagha for overall spiritual and material well-being.',
+    intro: 'Anagha Vratam is a profound spiritual practice seeking the grace of the Dattatreya lineage.',
+    significance: 'Removes accumulated sins and grants peace of mind and success.',
+    included: ['Dattatreya Pooja', 'Vratam'],
+    preparation: 'Devotional setup as per tradition.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'venkateshwara-kalyanam',
+    category: 'Poojas',
+    title: 'Venkateshwara Kalyanam',
+    slug: 'venkateshwara-kalyanam',
+    image: '/assets/images/services/poojas/venkateshwara-kalyanam.webp',
+    shortDesc: 'The celestial wedding ceremony of Lord Venkateshwara and Goddess Padmavathi.',
+    intro: 'Performing or witnessing the Venkateshwara Kalyanam is considered highly meritorious, bringing the divine couple\'s grace into the household.',
+    significance: 'Brings immense joy, early marriage for unmarried individuals, and harmony in marital life.',
+    included: ['Kalyana Utsavam rituals'],
+    preparation: 'Elaborate setup mimicking a traditional wedding.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'shiva-kalyanam',
+    category: 'Poojas',
+    title: 'Shiva Kalyanam',
+    slug: 'shiva-kalyanam',
+    image: '/assets/images/services/poojas/shiva-kalyanam.webp',
+    shortDesc: 'The divine wedding of Lord Shiva and Goddess Parvati.',
+    intro: 'Shiva Kalyanam celebrates the union of cosmic consciousness and energy.',
+    significance: 'Grants marital bliss, spiritual elevation, and resolution of relationship conflicts.',
+    included: ['Kalyana Utsavam'],
+    preparation: 'Traditional setup for Shiva-Parvati.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'subrahmanya-kalyanam',
+    category: 'Poojas',
+    title: 'Subrahmanya Kalyanam',
+    slug: 'subrahmanya-kalyanam',
+    image: '/assets/images/services/poojas/subrahmanya-kalyanam.webp',
+    shortDesc: 'The celestial wedding of Lord Subrahmanya with Valli and Devasena.',
+    intro: 'A beautiful ceremony invoking the blessings of the Commander of the Devas.',
+    significance: 'Removes Kuja/Sarpa doshas, helps in progeny, and grants success in endeavors.',
+    included: ['Kalyana Utsavam'],
+    preparation: 'Appropriate setup and offerings.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'other-kalyana-sevas',
+    category: 'Poojas',
+    title: 'Other Kalyana Sevas',
+    slug: 'other-kalyana-sevas',
+    image: '/assets/images/services/poojas/other-kalyana-sevas.webp',
+    shortDesc: 'Various other celestial wedding ceremonies based on family traditions.',
+    intro: 'We perform other Kalyana Sevas like Sita Rama Kalyanam, Radha Krishna Kalyanam as per specific requests.',
+    significance: 'Invokes divine grace tailored to specific deity worship traditions.',
+    included: ['Custom Kalyana Utsavam'],
+    preparation: 'Customized based on the specific Seva.',
+    faq: [],
+    featured: false
+  },
+
+  // PITRU POOJAS
+  {
+    id: 'maasikam',
+    category: 'Pitru Poojas',
+    title: 'Maasikam',
+    slug: 'maasikam',
+    image: '/assets/images/services/pitru-poojas/maasikam.webp',
+    shortDesc: 'Monthly rituals performed for the departed souls during the first year.',
+    intro: 'Maasikam is the monthly observance performed for twelve months following the passing of a family member.',
+    significance: 'Helps the departed soul in their onward journey and brings peace to the family.',
+    included: ['Traditional monthly rituals', 'Pindadaanam'],
+    preparation: 'Specific traditional requirements will be communicated.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'shraddham',
+    category: 'Pitru Poojas',
+    title: 'Shraddham',
+    slug: 'shraddham',
+    image: '/assets/images/services/pitru-poojas/shraddham.webp',
+    shortDesc: 'Annual ceremonies performed to honor and seek blessings from ancestors.',
+    intro: 'Shraddham is a vital duty (dharma) of descendants to honor their ancestors with devotion and traditional offerings.',
+    significance: 'Ensures the continued blessings of the Pitru Devatas for the prosperity of the lineage.',
+    included: ['Vedic Shraddham rituals', 'Tarpanam'],
+    preparation: 'Requires strict adherence to traditional guidelines.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'samvatsarikam',
+    category: 'Pitru Poojas',
+    title: 'Samvatsarikam',
+    slug: 'samvatsarikam',
+    image: '/assets/images/services/pitru-poojas/samvatsarikam.webp',
+    shortDesc: 'The first annual death anniversary rituals.',
+    intro: 'Samvatsarikam marks the completion of one year and involves elaborate rituals to elevate the departed soul.',
+    significance: 'Crucial for the soul\'s peaceful transition.',
+    included: ['Elaborate annual rituals'],
+    preparation: 'Detailed preparation is required as per tradition.',
+    faq: [],
+    featured: false
+  },
+
+  // SPECIALIST VEDIC SERVICES
+  {
+    id: 'chandi-specialist',
+    category: 'Specialist Vedic Services',
+    title: 'Chandi',
+    slug: 'chandi-specialist',
+    image: '/assets/images/services/specialist/chandi.webp',
+    shortDesc: 'Specialized Chandi rituals performed by expert practitioners.',
+    intro: 'Our specialists are highly trained in the intricate and powerful Chandi rituals, ensuring strict adherence to the demanding Vedic procedures.',
+    significance: 'Maximum spiritual efficacy for overcoming the most difficult life challenges.',
+    included: ['Expert execution of complex Chandi rituals'],
+    preparation: 'Comprehensive consultation required.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'pratyangira-specialist',
+    category: 'Specialist Vedic Services',
+    title: 'Pratyangira',
+    slug: 'pratyangira-specialist',
+    image: '/assets/images/services/specialist/pratyangira.webp',
+    shortDesc: 'Specialized Pratyangira rituals for supreme protection.',
+    intro: 'Performed by initiated practitioners who understand the profound nuances of Pratyangira worship.',
+    significance: 'Creates an impenetrable spiritual shield.',
+    included: ['Specialized protective rituals'],
+    preparation: 'Strict guidelines apply.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'varahi-specialist',
+    category: 'Specialist Vedic Services',
+    title: 'Varahi',
+    slug: 'varahi-specialist',
+    image: '/assets/images/services/specialist/varahi.webp',
+    shortDesc: 'Specialized Varahi worship for courage and removing deep-rooted negativity.',
+    intro: 'Expert conduct of Varahi rituals to invoke swift divine intervention in critical matters.',
+    significance: 'Empowers the devotee with immense inner strength.',
+    included: ['Expert Varahi rituals'],
+    preparation: 'Guidance provided by specialists.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'rajashyamala-specialist',
+    category: 'Specialist Vedic Services',
+    title: 'Rajashyamala',
+    slug: 'rajashyamala-specialist',
+    image: '/assets/images/services/specialist/rajashyamala.webp',
+    shortDesc: 'Specialized rituals invoking Goddess Rajashyamala for wisdom, articulation, and administrative success.',
+    intro: 'Rajashyamala (Matangi) worship is highly specialized, granting political power, success in arts, and influential speech.',
+    significance: 'Ideal for leaders, politicians, and those seeking high positions.',
+    included: ['Specialized Rajashyamala rituals'],
+    preparation: 'Consultation required.',
+    faq: [],
+    featured: true
+  },
+
+  // ABHISHEKAMS & SPECIAL ARCHANAS
+  {
+    id: 'ekadasha-rudram',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Ekadasha Rudram',
+    slug: 'ekadasha-rudram',
+    image: '/assets/images/services/abhishekams/ekadasha-rudram.webp',
+    shortDesc: 'Chanting of Sri Rudram 11 times with Abhishekam.',
+    intro: 'Ekadasha Rudram is a profound worship of Lord Shiva involving 11 continuous recitations of the sacred Rudram.',
+    significance: 'Purifies the environment, heals diseases, and brings deep spiritual peace.',
+    included: ['11 Rudram chants', 'Elaborate Abhishekam'],
+    preparation: 'Appropriate Shiva Lingam and abhishekam materials.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'shata-rudram',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Shata Rudram',
+    slug: 'shata-rudram',
+    image: '/assets/images/services/abhishekams/shata-rudram.webp',
+    shortDesc: 'Extensive chanting of Sri Rudram 100 times.',
+    intro: 'A larger scale worship involving multiple priests chanting the Rudram to complete 100 recitations.',
+    significance: 'Removes great sins and grants immense prosperity and grace.',
+    included: ['100 Rudram chants', 'Maha Abhishekam'],
+    preparation: 'Significant arrangement of materials and space.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'maha-rudram',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Maha Rudram',
+    slug: 'maha-rudram',
+    image: '/assets/images/services/abhishekams/maha-rudram.webp',
+    shortDesc: 'Grand scale worship with 1,331 chants of Sri Rudram.',
+    intro: 'Maha Rudram is a major event requiring many Ritwiks, creating massive positive spiritual vibrations.',
+    significance: 'Brings welfare to the entire community and fulfills major desires.',
+    included: ['1,331 Rudram chants', 'Grand Homa and Abhishekam'],
+    preparation: 'Event-scale preparation required.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'ati-rudram',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Ati Rudram',
+    slug: 'ati-rudram',
+    image: '/assets/images/services/abhishekams/ati-rudram.webp',
+    shortDesc: 'The ultimate Rudra Yagna with 14,641 chants.',
+    intro: 'Ati Rudram is the pinnacle of Shiva worship, a rare and monumental event performed for global peace and ultimate liberation.',
+    significance: 'The highest form of planetary and karmic pacification.',
+    included: ['14,641 Rudram chants', 'Massive scale rituals'],
+    preparation: 'Requires extensive planning and resources.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'sarva-devata-abhishekam',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Sarva Devata Abhishekam',
+    slug: 'sarva-devata-abhishekam',
+    image: '/assets/images/services/abhishekams/sarva-devata-abhishekam.webp',
+    shortDesc: 'Combined Abhishekam for all major deities in a household or temple.',
+    intro: 'A comprehensive worship protocol ensuring all invoked deities receive sacred bathing and offerings.',
+    significance: 'Ensures holistic blessings from the entire divine pantheon.',
+    included: ['Multiple deity abhishekam'],
+    preparation: 'Assorted materials for various deities.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'sri-chakra-abhishekam',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Sri Chakra Abhishekam',
+    slug: 'sri-chakra-abhishekam',
+    image: '/assets/images/services/abhishekams/sri-chakra-abhishekam.webp',
+    shortDesc: 'Sacred bathing of the mystical Sri Chakra (Meru).',
+    intro: 'Sri Chakra Abhishekam is a highly esoteric and powerful ritual honoring the Divine Mother Lalita Tripurasundari in her geometric form.',
+    significance: 'Grants all material and spiritual desires, leading to ultimate realization.',
+    included: ['Sri Chakra Navavarana principles', 'Specialized Abhishekam'],
+    preparation: 'Requires a consecrated Sri Chakra and specific pure materials.',
+    faq: [],
+    featured: true
+  },
+  {
+    id: 'navavarana-archana',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Navavarana Archana',
+    slug: 'navavarana-archana',
+    image: '/assets/images/services/abhishekams/navavarana-archana.webp',
+    shortDesc: 'Detailed worship of the nine enclosures of the Sri Chakra.',
+    intro: 'A profound meditative worship of the deities presiding over the nine geometric levels of the Sri Yantra.',
+    significance: 'Systematic spiritual evolution and immense grace of the Divine Mother.',
+    included: ['Elaborate Archana following Srividya traditions'],
+    preparation: 'Specific offerings for each Avarana.',
+    faq: [],
+    featured: false
+  },
+  {
+    id: 'laksha-kumkumarchana',
+    category: 'Abhishekams & Special Archanas',
+    title: 'Laksha Kumkumarchana',
+    slug: 'laksha-kumkumarchana',
+    image: '/assets/images/services/abhishekams/laksha-kumkumarchana.webp',
+    shortDesc: 'Offering of Kumkum one lakh times while chanting Goddess names.',
+    intro: 'A magnificent devotional service where Kumkum is offered 100,000 times, usually reciting the Lalita Sahasranama.',
+    significance: 'Brings immense auspiciousness (Soubhagyam), wealth, and fulfills noble wishes.',
+    included: ['Continuous Kumkumarchana', 'Sahasranama Parayanam'],
+    preparation: 'Large quantities of pure Kumkum and flowers.',
+    faq: [],
+    featured: false
   }
 ];

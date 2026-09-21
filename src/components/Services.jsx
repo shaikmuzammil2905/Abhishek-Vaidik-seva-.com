@@ -10,9 +10,10 @@ export default function Services() {
   const navigate = useNavigate();
 
   const handleDropdownSelect = (e) => {
-    const selectedId = e.target.value;
-    if (selectedId) {
-      navigate(`/service/${selectedId}`);
+    const slug = e.target.value;
+    const service = servicesData.find(s => s.slug === slug);
+    if (service) {
+      navigate(`/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`);
     }
   };
 
@@ -50,7 +51,7 @@ export default function Services() {
         </div>
 
         <div className="services-grid">
-          {servicesData.map((service, index) => (
+          {servicesData.filter(s => s.featured).map((service, index) => (
             <div key={service.id} className="service-card card">
               <div className="service-card-image-wrapper">
                 <img
@@ -72,7 +73,7 @@ export default function Services() {
                 <h3 className="service-card-title">{service.title}</h3>
                 <p className="service-card-desc">{service.shortDesc}</p>
                 <div className="service-card-actions">
-                  <Link to={`/service/${service.id}`} className="btn btn-secondary btn-sm">
+                  <Link to={`/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`} className="btn btn-secondary btn-sm">
                     <span>View Details</span>
                     <ArrowRight size={16} />
                   </Link>
