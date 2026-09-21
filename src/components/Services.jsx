@@ -10,10 +10,13 @@ export default function Services() {
   const navigate = useNavigate();
 
   const handleDropdownSelect = (e) => {
-    const slug = e.target.value;
-    const service = servicesData.find(s => s.slug === slug);
+    const id = e.target.value;
+    const service = servicesData.find(s => s.id === id);
     if (service) {
-      navigate(`/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`);
+      const url = `/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`;
+      window.open(url, '_blank');
+      // Reset dropdown so the user can select the same option again if needed
+      e.target.value = "";
     }
   };
 
