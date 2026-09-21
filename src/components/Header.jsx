@@ -46,7 +46,7 @@ export default function Header() {
       <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
         <div className="container header-container">
           <Link to="/" className="logo">
-            <img src="/assets/logo.png" alt="Abhishek Vaidika Seva" className="header-logo-image" style={{ height: '50px', width: 'auto' }} />
+            <img src="/assets/logo.png" alt="Abhishek Vaidika Seva" className="header-logo-image" />
           </Link>
 
           {/* Desktop Navigation */}

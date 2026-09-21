@@ -42,7 +42,7 @@ export default function AboutSection() {
             </div>
 
             <p className="about-description">
-              Welcome to Abhishek Vaidika Seva, where we bring the sanctity and authenticity of ancient Vedic rituals to your modern life. Rooted deeply in the traditional scriptures, we ensure every ceremony is performed with utmost devotion, precision, and adherence to Vedic procedures.
+              Welcome to Vaidika Seva, where we bring the sanctity and authenticity of ancient Vedic rituals to your modern life. Rooted deeply in the traditional scriptures, we ensure every ceremony is performed with utmost devotion, precision, and adherence to Vedic procedures.
             </p>
             
             <p className="about-description">

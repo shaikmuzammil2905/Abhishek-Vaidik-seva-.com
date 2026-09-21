@@ -56,22 +56,6 @@ export default function Services() {
         <div className="services-grid">
           {servicesData.filter(s => s.featured).map((service, index) => (
             <div key={service.id} className="service-card card">
-              <div className="service-card-image-wrapper">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="service-card-image"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.style.background = 'linear-gradient(135deg, #5E141A, #3E2723)';
-                    e.target.style.minHeight = '200px';
-                  }}
-                />
-                <div className="service-card-overlay">
-                  <span className="service-card-number">0{index + 1}</span>
-                </div>
-              </div>
               <div className="service-card-content">
                 <h3 className="service-card-title">{service.title}</h3>
                 <p className="service-card-desc">{service.shortDesc}</p>

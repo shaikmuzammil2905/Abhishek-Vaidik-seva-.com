@@ -23,6 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* needed for absolute positioning of hamburger on mobile */
 }
 
 .logo {
@@ -228,7 +229,8 @@
 }
 
 .header-logo-image {
-  height: 40px !important; /* Increase logo visibility on mobile */
+  height: 50px; /* Default desktop size */
+  width: auto;
 }
 
 .brand-grand-title {
@@ -256,12 +258,31 @@
 
 @media (max-width: 768px) {
   .header {
-    background: var(--clr-maroon); /* Mobile header maroon background */
+    background: var(--clr-maroon);
     padding: 0.5rem 0;
   }
   
   .header-scrolled {
     background: var(--clr-maroon-dark);
+  }
+
+  .header-container {
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .header-logo-image {
+    height: 70px !important; /* Larger logo on mobile as requested */
+  }
+
+  .mobile-menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

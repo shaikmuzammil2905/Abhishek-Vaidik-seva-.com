@@ -20,21 +20,11 @@ export default function Hero() {
 
       <div className="container hero-container">
         <div className="hero-content">
-          {/* Main H1 Heading (Header already has logo - no duplicate logo mark) */}
+          {/* Main H1 Heading */}
           <h1 className="hero-title animate-fade-up">
-            <span className="title-word">Vaidika</span>
-            <span className="title-word">Seva</span>
+            <span className="title-word" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', wordBreak: 'break-word' }}>Vedokthamgaa</span>
+            <span className="title-word" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', wordBreak: 'break-word' }}>Vishwasaneeyamga</span>
           </h1>
-
-          {/* Gold Tagline */}
-          <div className="hero-tagline-box animate-fade-up animate-stagger-1">
-            <p className="hero-tagline">Vedokthamgaa Vishwasaneeyamga</p>
-            <div className="hero-ornament-line">
-              <span className="line"></span>
-              <span className="diamond">◆</span>
-              <span className="line"></span>
-            </div>
-          </div>
           
           {/* Short Description */}
           <p className="hero-desc animate-fade-up animate-stagger-2">

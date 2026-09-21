@@ -104,10 +104,6 @@ export default function ServicesPage() {
                   window.open(url, '_blank');
                 }}
               >
-                <div className="service-image-container">
-                  <img src={service.image} alt={service.title} loading="lazy" />
-                  <div className="service-number">{String(index + 1).padStart(2, '0')}</div>
-                </div>
                 <div className="service-content">
                   <h3 className="service-title">{service.title}</h3>
                   <p className="service-desc">{service.shortDesc}</p>
