@@ -84,22 +84,26 @@
   max-width: 520px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 /* Main Title (Vaidika Seva) */
 .hero-title {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   font-family: var(--font-serif);
-  font-size: clamp(42px, 12vw, 56px);
+  font-size: clamp(24px, 7vw, 42px);
   font-weight: 800;
   line-height: 0.98;
   color: #E6C665;
   margin-bottom: 0.85rem;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
   letter-spacing: -0.01em;
-  max-width: 330px;
+  max-width: 100%;
+  text-transform: uppercase;
 }
 
 .title-word {
@@ -320,12 +324,16 @@
 
   .hero-content {
     max-width: 560px;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .hero-title {
     font-size: clamp(3.8rem, 5.5vw, 5.2rem);
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom: 1rem;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .hero-tagline-box {
