@@ -32,39 +32,56 @@
     gap: 2rem;
     flex-wrap: wrap;
   }
+  .category-filters {
+    gap: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-filters {
+    gap: 16px;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
 }
 
 .category-filters {
   display: flex;
-  gap: 0.5rem;
+  gap: 10px;
   overflow-x: auto;
   padding-bottom: 0.5rem;
+  max-width: 100%;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  scrollbar-width: none; /* Firefox */
 }
 
 .category-filters::-webkit-scrollbar {
-  height: 4px;
-}
-
-.category-filters::-webkit-scrollbar-thumb {
-  background: var(--gold, #d4af37);
-  border-radius: 4px;
+  display: none; /* Chrome/Safari/Edge */
 }
 
 .category-chip {
   background: white;
   border: 1px solid var(--gold, #d4af37);
   color: var(--primary-color, #721c24);
-  padding: 0.5rem 1.25rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.category-chip:hover,
+.category-chip:hover {
+  background: var(--creamy-bg, #fdfbf7);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(114, 28, 36, 0.1);
+}
+
 .category-chip.active {
   background: var(--primary-color, #721c24);
   color: white;
