@@ -432,7 +432,7 @@ export const servicesData = [
   },
   {
     id: 'abhishekam-sarva-devathaa',
-    name: 'Sarva Devathaa Abhishekam',
+    title: 'Sarva Devathaa Abhishekam',
     category: 'Abhishekams & Special Archanas',
     slug: 'sarva-devathaa-abhishekam',
     image: '/assets/images/services/abhishekam-sarva-devathaa.png',
@@ -444,7 +444,7 @@ export const servicesData = [
   },
   {
     id: 'abhishekam-sri-chakra',
-    name: 'Sri Chakra Abhishekam',
+    title: 'Sri Chakra Abhishekam',
     category: 'Abhishekams & Special Archanas',
     slug: 'sri-chakra-abhishekam',
     image: '/assets/images/services/abhishekam-sri-chakra.png',
@@ -456,7 +456,7 @@ export const servicesData = [
   },
   {
     id: 'abhishekam-navaavarana-archana',
-    name: 'Navaavarana Archana',
+    title: 'Navaavarana Archana',
     category: 'Abhishekams & Special Archanas',
     slug: 'navaavarana-archana',
     image: '/assets/images/services/abhishekam-navaavarana-archana.png',
@@ -468,7 +468,7 @@ export const servicesData = [
   },
   {
     id: 'abhishekam-laksha-kumkumarchana',
-    name: 'Laksha Kumkumarchana',
+    title: 'Laksha Kumkumarchana',
     category: 'Abhishekams & Special Archanas',
     slug: 'laksha-kumkumarchana',
     image: '/assets/images/services/abhishekam-laksha-kumkumarchana.png',
