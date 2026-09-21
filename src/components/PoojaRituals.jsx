@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { servicesData } from '../data/services';
+import ServiceContentModal from './ServiceContentModal';
 import './PoojaRituals.css';
 
 export default function PoojaRituals() {
+  const [contentModalService, setContentModalService] = useState(null);
   const categories = servicesData.slice(0, 8);
 
   return (
@@ -17,7 +19,12 @@ export default function PoojaRituals() {
 
         <div className="pooja-grid">
           {categories.map((cat) => (
-            <Link key={cat.id} to={`/service/${cat.id}`} className="pooja-card">
+            <div 
+              key={cat.id} 
+              className="pooja-card" 
+              style={{ cursor: 'pointer' }}
+              onClick={() => setContentModalService(cat)}
+            >
               <div className="pooja-card-image-wrapper">
                 <img src={cat.image} alt={cat.title} loading="lazy" />
               </div>
@@ -25,10 +32,19 @@ export default function PoojaRituals() {
                 <h4>{cat.title}</h4>
                 <p>{cat.shortDesc}</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
+
+      {contentModalService && (
+        <ServiceContentModal
+          isOpen={!!contentModalService}
+          onClose={() => setContentModalService(null)}
+          service={contentModalService}
+          showImage={true}
+        />
+      )}
     </section>
   );
 }

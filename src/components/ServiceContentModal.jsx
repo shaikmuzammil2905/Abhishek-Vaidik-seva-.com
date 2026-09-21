@@ -2,7 +2,7 @@ import React from 'react';
 import { X, CheckCircle, MessageCircle } from 'lucide-react';
 import './ServiceEnquiryPopup.css';
 
-export default function ServiceContentModal({ isOpen, onClose, service }) {
+export default function ServiceContentModal({ isOpen, onClose, service, showImage = false }) {
   if (!isOpen || !service) return null;
 
   return (
@@ -12,7 +12,10 @@ export default function ServiceContentModal({ isOpen, onClose, service }) {
           <X size={24} />
         </button>
         
-        <div className="popup-header" style={{ borderBottom: '1px solid rgba(212, 175, 55, 0.3)', paddingBottom: '1rem', marginBottom: '1.5rem', display: 'block' }}>
+        <div className="popup-header" style={{ borderBottom: '1px solid rgba(212, 175, 55, 0.3)', paddingBottom: '1rem', marginBottom: '1.5rem', display: 'block', textAlign: 'center' }}>
+          {showImage && service.image && (
+            <img src={service.image} alt={service.title} style={{ width: '100%', maxHeight: '200px', objectFit: 'cover', borderRadius: '8px', marginBottom: '1rem' }} />
+          )}
           <h3 style={{ fontSize: '1.8rem', color: 'var(--clr-maroon)', marginBottom: '0.5rem', fontFamily: 'var(--font-serif)' }}>{service.title}</h3>
           <p style={{ color: 'var(--clr-text-muted)', fontSize: '1.05rem', lineHeight: '1.5' }}>{service.shortDesc}</p>
         </div>
