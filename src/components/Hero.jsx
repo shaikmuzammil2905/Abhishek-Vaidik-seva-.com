@@ -4,13 +4,13 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section className="hero">
-      {/* Mobile Background: Clean high-res image without baked-in text */}
+      {/* Mobile Background: Clean high-res image (image copy 20.png) without baked-in text */}
       <div 
         className="hero-bg mobile-bg" 
         style={{ backgroundImage: "url('/assets/images/hero-mobile.png')" }}
       ></div>
       
-      {/* Desktop Background: Clean wide cinematic image */}
+      {/* Desktop Background: Clean wide cinematic image (image copy 3.png) */}
       <div 
         className="hero-bg desktop-bg" 
         style={{ backgroundImage: "url('/assets/images/hero-desktop.png')" }}
@@ -20,9 +20,10 @@ export default function Hero() {
 
       <div className="container hero-container">
         <div className="hero-content">
+          {/* Main H1 Heading (Header already has logo - no duplicate logo mark) */}
           <h1 className="hero-title animate-fade-up">
-            <span className="title-word">ABHISHEK</span>
-            <span className="title-word">VAIDIKA SEVA</span>
+            <span className="title-word">Vaidika</span>
+            <span className="title-word">Seva</span>
           </h1>
 
           {/* Gold Tagline */}
@@ -40,7 +41,7 @@ export default function Hero() {
             Authentic Vedic Poojas, Homams, Samskaras and Purohitha Seva performed with traditional Vedic procedures and devotion.
           </p>
 
-          {/* Purohit Credential Card */}
+          {/* Purohit Credential Card (Normal Document Flow) */}
           <div className="hero-profile-card animate-fade-up animate-stagger-3">
             <div className="hero-profile-avatar">
               <UserCheck size={24} className="avatar-icon" />
