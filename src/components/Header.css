@@ -227,6 +227,44 @@
   width: 100%;
 }
 
+.header-logo-image {
+  height: 40px !important; /* Increase logo visibility on mobile */
+}
+
+.brand-grand-title {
+  font-size: 1.15rem;
+}
+
+/* Hamburger Button */
+.mobile-menu-btn {
+  display: flex;
+  color: var(--clr-gold);
+}
+
+.mobile-nav-drawer {
+  display: block;
+}
+
+/* =========================================================
+   SCROLL STATE
+   ========================================================= */
+.header-scrolled {
+  background: var(--clr-maroon-dark);
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: var(--clr-maroon); /* Mobile header maroon background */
+    padding: 0.5rem 0;
+  }
+  
+  .header-scrolled {
+    background: var(--clr-maroon-dark);
+  }
+}
+
 /* =========================================================
    DESKTOP NAVIGATION (1024px+)
    ========================================================= */

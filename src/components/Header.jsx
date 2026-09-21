@@ -48,7 +48,7 @@ export default function Header() {
           <Link to="/" className="logo">
             <img src="/assets/logo.png" alt="Abhishek Vaidika Seva" className="header-logo-image" style={{ height: '50px', width: 'auto', marginRight: '10px' }} />
             <div className="logo-text">
-              <span className="brand-grand-title">VAIDIKA SEVA</span>
+              <span className="brand-grand-title">ABHISHEK VAIDIKA SEVA</span>
             </div>
           </Link>
 
@@ -127,63 +127,15 @@ export default function Header() {
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-content">
           <ul className="mobile-nav-list">
-            {navItems.map((item) => {
-              if (item.isDropdown) {
-                return (
-                  <li key={item.name} className="mobile-dropdown-group">
-                    <div className="mobile-dropdown-header">
-                      <Link 
-                        to={item.path} 
-                        className="mobile-nav-link text-left"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                      <button 
-                        className="mobile-accordion-toggle"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setServicesDropdownOpen(!servicesDropdownOpen);
-                        }}
-                        aria-label="Toggle services list"
-                      >
-                        <ChevronDown size={22} className={`accordion-chevron ${servicesDropdownOpen ? 'rotated' : ''}`} />
-                      </button>
-                    </div>
-
-                    {/* All 10 Services List */}
-                    <div className={`mobile-submenu-list ${servicesDropdownOpen ? 'expanded' : ''}`}>
-                      <div className="submenu-title">
-                        <Sparkles size={14} /> All Vedic Services:
-                      </div>
-                      {['Homams', 'Poojas', 'Pitru Poojas', 'Specialist Vedic Services', 'Abhishekams & Special Archanas'].map((cat) => (
-                        <Link
-                          key={cat}
-                          to={`/services?category=${encodeURIComponent(cat)}`}
-                          className="mobile-submenu-item"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          <ChevronRight size={15} />
-                          <span>{cat}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </li>
-                );
-              }
-
-              return (
-                <li key={item.name}>
-                  <Link 
-                    to={item.path} 
-                    className="mobile-nav-link"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              );
-            })}
+            <li><Link to="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
+            <li><Link to="/about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link></li>
+            <li><Link to="/services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link></li>
+            <li><Link to="/services?category=Poojas" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Poojas</Link></li>
+            <li><Link to="/services?category=Homams" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Homas</Link></li>
+            <li><Link to="/services?category=Pitru%20Poojas" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Pitru Poojas</Link></li>
+            <li><Link to="/services?category=Abhishekams%20%26%20Special%20Archanas" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Abhishekam</Link></li>
+            <li><Link to="/gallery" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Gallery</Link></li>
+            <li><Link to="/contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>
           </ul>
 
           <div className="mobile-nav-footer">
