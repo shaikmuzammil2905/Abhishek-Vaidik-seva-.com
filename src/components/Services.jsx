@@ -3,10 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, MessageCircle, ChevronDown, Sparkles } from 'lucide-react';
 import { servicesData } from '../data/services';
 import ServiceModal from './ServiceModal';
+import ServiceContentModal from './ServiceContentModal';
 import './Services.css';
 
 export default function Services() {
   const [modalService, setModalService] = useState(null);
+  const [contentModalService, setContentModalService] = useState(null);
   const navigate = useNavigate();
 
   const handleDropdownSelect = (e) => {
@@ -55,18 +57,33 @@ export default function Services() {
 
         <div className="services-grid">
           {servicesData.filter(s => s.featured).map((service, index) => (
-            <div key={service.id} className="service-card card">
+            <div 
+              key={service.id} 
+              className="service-card card" 
+              style={{ cursor: 'pointer' }}
+              onClick={() => setContentModalService(service)}
+            >
               <div className="service-card-content">
                 <h3 className="service-card-title">{service.title}</h3>
                 <p className="service-card-desc">{service.shortDesc}</p>
                 <div className="service-card-actions">
-                  <Link to={`/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`} className="btn btn-secondary btn-sm">
+                  <button 
+                    className="btn btn-secondary btn-sm"
+                    style={{ background: 'none', color: 'var(--clr-gold)', border: '1px solid var(--clr-gold)' }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setContentModalService(service);
+                    }}
+                  >
                     <span>View Details</span>
                     <ArrowRight size={16} />
-                  </Link>
+                  </button>
                   <button
                     className="btn btn-primary btn-sm"
-                    onClick={() => setModalService(service)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setModalService(service);
+                    }}
                   >
                     <MessageCircle size={16} />
                     <span>Enquire Now</span>
@@ -82,6 +99,14 @@ export default function Services() {
         <ServiceModal
           service={modalService}
           onClose={() => setModalService(null)}
+        />
+      )}
+
+      {contentModalService && (
+        <ServiceContentModal
+          isOpen={!!contentModalService}
+          onClose={() => setContentModalService(null)}
+          service={contentModalService}
         />
       )}
     </section>

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Search } from 'lucide-react';
 import { servicesData } from '../data/services';
 import ServiceEnquiryPopup from '../components/ServiceEnquiryPopup';
+import ServiceContentModal from '../components/ServiceContentModal';
 import CTASection from '../components/CTASection';
 import './ServicesPage.css'; // Will create this
 
@@ -13,7 +14,8 @@ export default function ServicesPage() {
 
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [searchQuery, setSearchQuery] = useState('');
-  const [modalService, setModalService] = useState(null);
+  const [modalService, setModalService] = useState(null); // Enquiry Modal
+  const [contentModalService, setContentModalService] = useState(null); // Content Modal
 
   // Sync state if URL changes
   useEffect(() => {
@@ -99,23 +101,23 @@ export default function ServicesPage() {
                 key={service.id} 
                 className="premium-service-card"
                 style={{ animationDelay: `${(index % 10) * 0.1}s`, cursor: 'pointer' }}
-                onClick={() => {
-                  const url = `/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`;
-                  window.open(url, '_blank');
-                }}
+                onClick={() => setContentModalService(service)}
               >
                 <div className="service-content">
                   <h3 className="service-title">{service.title}</h3>
                   <p className="service-desc">{service.shortDesc}</p>
                   
                   <div className="service-card-buttons">
-                    <Link 
-                      to={`/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`} 
+                    <button 
                       className="view-details-btn"
-                      onClick={(e) => e.stopPropagation()}
+                      style={{ background: 'none', border: 'none', padding: '0', cursor: 'pointer' }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setContentModalService(service);
+                      }}
                     >
                       VIEW DETAILS &rarr;
-                    </Link>
+                    </button>
                     <button 
                       className="enquire-now-btn" 
                       onClick={(e) => {
@@ -144,6 +146,12 @@ export default function ServicesPage() {
         isOpen={!!modalService} 
         onClose={() => setModalService(null)} 
         service={modalService} 
+      />
+
+      <ServiceContentModal 
+        isOpen={!!contentModalService} 
+        onClose={() => setContentModalService(null)} 
+        service={contentModalService} 
       />
     </div>
   );
