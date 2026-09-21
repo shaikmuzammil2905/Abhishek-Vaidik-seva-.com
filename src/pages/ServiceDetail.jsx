@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ChevronRight, PhoneCall, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { ChevronRight, PhoneCall, MessageCircle, CheckCircle } from 'lucide-react';
 import { servicesData } from '../data/services';
 import ServiceEnquiryPopup from '../components/ServiceEnquiryPopup';
 import './ServiceDetail.css';
@@ -72,13 +72,13 @@ export default function ServiceDetail() {
           </section>
 
           {/* What's Included */}
-          {service.included && service.included.length > 0 && (
+          {service.whatIsIncluded && service.whatIsIncluded.length > 0 && (
             <section className="service-section">
               <h2>What the service generally involves</h2>
               <ul className="included-list">
-                {service.included.map((item, i) => (
+                {service.whatIsIncluded.map((item, i) => (
                   <li key={i}>
-                    <CheckCircle2 size={18} className="check-icon" />
+                    <CheckCircle size={18} className="check-icon" />
                     <span>{item}</span>
                   </li>
                 ))}

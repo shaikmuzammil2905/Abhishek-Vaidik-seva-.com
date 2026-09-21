@@ -98,7 +98,11 @@ export default function ServicesPage() {
               <div 
                 key={service.id} 
                 className="premium-service-card"
-                style={{ animationDelay: `${(index % 10) * 0.1}s` }}
+                style={{ animationDelay: `${(index % 10) * 0.1}s`, cursor: 'pointer' }}
+                onClick={() => {
+                  const url = `/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`;
+                  window.open(url, '_blank');
+                }}
               >
                 <div className="service-image-container">
                   <img src={service.image} alt={service.title} loading="lazy" />
@@ -109,10 +113,20 @@ export default function ServicesPage() {
                   <p className="service-desc">{service.shortDesc}</p>
                   
                   <div className="service-card-buttons">
-                    <Link to={`/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`} className="view-details-btn">
+                    <Link 
+                      to={`/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`} 
+                      className="view-details-btn"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       VIEW DETAILS &rarr;
                     </Link>
-                    <button className="enquire-now-btn" onClick={() => setModalService(service)}>
+                    <button 
+                      className="enquire-now-btn" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setModalService(service);
+                      }}
+                    >
                       ENQUIRE NOW
                     </button>
                   </div>
