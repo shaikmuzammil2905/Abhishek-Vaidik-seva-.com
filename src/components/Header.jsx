@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, PhoneCall, ChevronDown, ChevronRight, Sparkles } from 'lucide-react';
-import { servicesData } from '../data/services';
+import { Menu, X, PhoneCall, ChevronDown, ChevronRight } from 'lucide-react';
 import './Header.css';
 
 export default function Header() {
@@ -35,17 +34,32 @@ export default function Header() {
     { name: 'Contact', path: '/contact' },
   ];
 
-  const handleServiceClick = (serviceId) => {
-    setMobileMenuOpen(false);
-    setServicesDropdownOpen(false);
-    navigate(`/service/${serviceId}`);
-  };
-
   return (
     <>
       <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
-        <div className="container header-container">
-          <Link to="/" className="logo">
+        {/* Mobile Full-Width Header Banner Artwork */}
+        <div className="mobile-header-banner-wrapper">
+          <Link to="/" className="mobile-header-link" aria-label="Abhishek Vaidika Seva Home">
+            <img 
+              src="/assets/mobile-header-banner.png" 
+              alt="Abhishek Vaidika Seva - Vedokthamgaa Vishwasaneyamgaa" 
+              className="mobile-header-banner-img"
+            />
+          </Link>
+          
+          {/* Subtle Mobile Hamburger Button Overlay on Top-Right */}
+          <button 
+            className="mobile-menu-btn" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Desktop Container (1024px+) */}
+        <div className="container header-container desktop-header-container">
+          <Link to="/" className="logo desktop-logo">
             <img src="/assets/logo.png" alt="Abhishek Vaidika Seva" className="header-logo-image" />
           </Link>
 
@@ -108,15 +122,6 @@ export default function Header() {
               Book Purohitham
             </Link>
           </div>
-
-          {/* Mobile Hamburger Button */}
-          <button 
-            className="mobile-menu-btn" 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle navigation menu"
-          >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
       </header>
 
