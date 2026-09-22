@@ -1,5 +1,5 @@
 /* =========================================================
-   HERO SECTION — MOBILE-FIRST NATURAL DOCUMENT FLOW
+   HERO SECTION — NATURAL DOCUMENT FLOW & VIVID BACKGROUND
    ========================================================= */
 
 .hero {
@@ -9,7 +9,7 @@
   align-items: flex-start;
   overflow: hidden;
   padding-top: 0;
-  background-color: #240508;
+  background-color: #1a0406;
 }
 
 /* Background Image Layers */
@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -28,7 +28,7 @@
 /* Mobile Background */
 .mobile-bg {
   display: block;
-  background-position: center 60%;
+  background-position: center top;
 }
 
 /* Desktop Background */
@@ -36,7 +36,7 @@
   display: none;
 }
 
-/* Dark Gradient Overlay for optimal readability */
+/* Balanced Gradient Overlay: dark enough at top for text readability, clear in middle/bottom to showcase the priest & homam fire */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -45,16 +45,16 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(36, 5, 8, 0.95) 0%,
-    rgba(40, 10, 14, 0.85) 25%,
-    rgba(40, 10, 14, 0.50) 65%,
-    rgba(25, 6, 9, 0.88) 100%
+    rgba(28, 4, 7, 0.82) 0%,
+    rgba(32, 5, 8, 0.65) 30%,
+    rgba(28, 4, 7, 0.40) 65%,
+    rgba(20, 3, 5, 0.78) 100%
   );
   z-index: 2;
 }
 
 /* =========================================================
-   HERO CONTENT — Natural flow right below the header
+   HERO CONTENT — Clean natural flow with full visibility
    ========================================================= */
 .hero-container {
   position: relative;
@@ -62,7 +62,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1.25rem 1rem calc(80px + env(safe-area-inset-bottom, 16px));
+  padding: 1.5rem 1rem 3.25rem;
 }
 
 .hero-content {
@@ -72,37 +72,37 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
-/* Hide desktop H1 on mobile since mobile header banner has the full branding & tagline */
+/* Hide desktop H1 on mobile since mobile header banner has the full branding */
 .hero-title-desktop-only {
   display: none;
 }
 
 /* Short Description (First visible text on mobile) */
 .hero-desc {
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.55;
   margin: 0;
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: 400;
+  color: #FFFFFF;
+  font-weight: 500;
   max-width: 360px;
   padding: 0 0.25rem;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 /* Purohit Credential Card */
 .hero-profile-card {
-  background: linear-gradient(135deg, rgba(68, 13, 19, 0.94) 0%, rgba(36, 5, 8, 0.96) 100%);
-  border: 1.5px solid rgba(230, 198, 101, 0.6);
+  background: linear-gradient(135deg, rgba(68, 13, 19, 0.92) 0%, rgba(36, 5, 8, 0.95) 100%);
+  border: 1.5px solid rgba(230, 198, 101, 0.65);
   border-radius: 14px;
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem;
   margin: 0;
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(10px);
   width: 100%;
   max-width: 380px;
@@ -151,7 +151,7 @@
 
 .purohit-univ {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   margin: 0;
   line-height: 1.3;
 }
@@ -188,7 +188,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   transition: all 0.25s ease;
   text-decoration: none;
   width: 100%;
@@ -225,7 +225,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.4);
   transition: all 0.25s ease;
   text-decoration: none;
   width: 100%;
@@ -235,7 +235,7 @@
 .hero-btn-call:active {
   background: linear-gradient(135deg, #FFF0A8 0%, #E6C665 50%, #BD900E 100%) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.55);
 }
 
 /* =========================================================
@@ -244,7 +244,7 @@
 @media (min-width: 1024px) {
   .hero {
     min-height: 100vh;
-    padding-top: 80px; /* Offset fixed desktop header */
+    padding-top: 80px;
     align-items: center;
   }
 
@@ -260,10 +260,10 @@
   .hero-overlay {
     background: linear-gradient(
       90deg,
-      rgba(40, 10, 14, 0.94) 0%,
-      rgba(40, 10, 14, 0.85) 35%,
-      rgba(40, 10, 14, 0.45) 60%,
-      rgba(25, 6, 9, 0.20) 100%
+      rgba(36, 5, 8, 0.92) 0%,
+      rgba(40, 10, 14, 0.82) 35%,
+      rgba(40, 10, 14, 0.40) 60%,
+      rgba(25, 6, 9, 0.15) 100%
     );
   }
 
