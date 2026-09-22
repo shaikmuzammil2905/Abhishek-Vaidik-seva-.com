@@ -106,6 +106,11 @@
   text-transform: uppercase;
 }
 
+/* Hide hero title on mobile — branding image in header already shows it */
+.hero-title-desktop-only {
+  display: none;
+}
+
 .title-word {
   display: block;
 }
@@ -334,6 +339,11 @@
     margin-bottom: 1rem;
     align-items: flex-start;
     text-align: left;
+  }
+
+  /* Show hero title on desktop */
+  .hero-title-desktop-only {
+    display: flex;
   }
 
   .hero-tagline-box {

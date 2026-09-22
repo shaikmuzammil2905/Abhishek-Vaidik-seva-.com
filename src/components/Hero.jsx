@@ -20,8 +20,8 @@ export default function Hero() {
 
       <div className="container hero-container">
         <div className="hero-content">
-          {/* Main H1 Heading */}
-          <h1 className="hero-title animate-fade-up">
+          {/* Main H1 Heading — hidden on mobile since the header logo includes this text */}
+          <h1 className="hero-title animate-fade-up hero-title-desktop-only">
             <span className="title-word" style={{ wordBreak: 'break-word' }}>Vedokthamgaa</span>
             <span className="title-word" style={{ wordBreak: 'break-word' }}>Vishwasaneeyamgaa</span>
           </h1>

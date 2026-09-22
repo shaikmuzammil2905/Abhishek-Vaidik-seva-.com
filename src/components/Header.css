@@ -7,16 +7,16 @@
   background-color: var(--clr-maroon);
   color: var(--clr-gold-light);
   transition: all var(--transition-normal);
-  padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.6rem 0;
+  border-bottom: none;
 }
 
 .header.header-scrolled {
-  padding: 0.7rem 0;
+  padding: 0.4rem 0;
   background-color: rgba(62, 12, 18, 0.96);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-  border-bottom-color: var(--clr-gold);
+  border-bottom: none;
 }
 
 .header-container {
@@ -229,8 +229,11 @@
 }
 
 .header-logo-image {
-  height: 50px; /* Default desktop size */
-  width: auto;
+  height: auto;
+  width: clamp(200px, 55vw, 280px);
+  max-height: 65px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .brand-grand-title {
@@ -275,7 +278,9 @@
   }
 
   .header-logo-image {
-    height: 70px !important; /* Larger logo on mobile as requested */
+    width: clamp(220px, 60vw, 300px) !important;
+    max-height: 70px !important;
+    height: auto !important;
   }
 
   .mobile-menu-btn {
@@ -292,6 +297,11 @@
 @media (min-width: 1024px) {
   .desktop-nav {
     display: block;
+  }
+
+  .header-logo-image {
+    width: 200px;
+    max-height: 50px;
   }
   
   .nav-list {
