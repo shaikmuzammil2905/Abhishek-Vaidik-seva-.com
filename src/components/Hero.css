@@ -54,7 +54,7 @@
 }
 
 /* =========================================================
-   HERO CONTENT — Clean natural flow with full visibility
+   HERO CONTENT — Clean natural flow with generous spacing
    ========================================================= */
 .hero-container {
   position: relative;
@@ -62,7 +62,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1.5rem 1rem 3.25rem;
+  padding: 2.25rem 1rem 6.5rem; /* Generous top gap for header & large bottom gap below Call Now */
 }
 
 .hero-content {
@@ -72,7 +72,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1rem;
+  gap: 1.25rem; /* Clean gap between text, profile card, and action buttons */
 }
 
 /* Hide desktop H1 on mobile since mobile header banner has the full branding */
