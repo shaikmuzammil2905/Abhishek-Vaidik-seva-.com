@@ -24,11 +24,14 @@ export default function AboutSection() {
               <div className="about-portrait-inner">
                 <img
                   src="/assets/images/img-copy-11.png"
-                  alt="Hari Anjaneya Abhishek Sharma (B.A.) - 16 Years in Purohitham"
+                  alt="Hari Anjaneya Abhishek Sharma (B.A.) - 16 Years experience in Purohitham , Specialists in performing Shodasakarmantham, Yagna Yaagaas, Marriages and Rituals."
                   className="about-image-grand"
                 />
                 <div className="about-portrait-caption">
-                  <span className="caption-badge">🔱 16 Years in Purohitham</span>
+                  <span className="caption-badge">
+                    <span className="caption-icon">🔱</span>
+                    <span className="caption-text">16 Years experience in Purohitham , Specialists in performing Shodasakarmantham, Yagna Yaagaas, Marriages and Rituals.</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -38,7 +41,7 @@ export default function AboutSection() {
             <div className="purohit-profile">
               <h3>Hari Anjaneya Abhishek Sharma (B.A.)</h3>
               <p className="qualification">Sri Venkateshwara Vedic University (TTD)</p>
-              <p className="experience">16 Years in Purohitham</p>
+              <p className="experience">16 Years experience in Purohitham , Specialists in performing Shodasakarmantham, Yagna Yaagaas, Marriages and Rituals.</p>
             </div>
 
             <p className="about-description about-specialist-highlight">

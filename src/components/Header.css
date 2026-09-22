@@ -20,6 +20,7 @@
   overflow: hidden;
   background-color: #3E0C12;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  padding: 4px 0;
 }
 
 .mobile-header-link {
@@ -30,10 +31,11 @@
 .mobile-header-banner-img {
   width: 100%;
   height: auto;
+  min-height: 80px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  transform: scale(1.1); /* Enlarge mobile logo banner artwork for enhanced prominence & clarity */
+  transform: scale(1.22); /* Increased size of logo in mobile view */
   transform-origin: center;
 }
 
