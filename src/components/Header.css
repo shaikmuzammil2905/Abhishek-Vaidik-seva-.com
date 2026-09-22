@@ -1,18 +1,23 @@
+/* =========================================================
+   HEADER — TRANSPARENT MOBILE, SOLID DESKTOP
+   ========================================================= */
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--clr-maroon);
+  background: transparent;
   color: var(--clr-gold-light);
   transition: all var(--transition-normal);
-  padding: 0.6rem 0;
+  padding: 0.75rem 0;
   border-bottom: none;
 }
 
+/* Scrolled state — solid bg for readability */
 .header.header-scrolled {
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
   background-color: rgba(62, 12, 18, 0.96);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
@@ -21,16 +26,19 @@
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  position: relative; /* needed for absolute positioning of hamburger on mobile */
+  position: relative;
 }
 
+/* Logo — centered, no box, no border */
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  justify-content: center;
   color: var(--clr-gold);
+  margin: 0 auto;
+  z-index: 2;
 }
 
 .logo-icon {
@@ -66,6 +74,17 @@
   display: none;
 }
 
+/* Logo image — large, crisp, no box background */
+.header-logo-image {
+  height: auto;
+  width: clamp(240px, 65vw, 320px);
+  max-height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.4));
+  display: block;
+}
+
+/* Hamburger Button — absolutely positioned right */
 .mobile-menu-btn {
   color: var(--clr-gold);
   display: flex;
@@ -74,8 +93,12 @@
   z-index: 1001;
   padding: 0.4rem;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(212, 175, 55, 0.3);
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Nav Button Links Reset */
@@ -228,66 +251,39 @@
   width: 100%;
 }
 
-.header-logo-image {
-  height: auto;
-  width: clamp(200px, 55vw, 280px);
-  max-height: 65px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-}
-
-.brand-grand-title {
-  font-size: 1.15rem;
-}
-
-/* Hamburger Button */
-.mobile-menu-btn {
-  display: flex;
-  color: var(--clr-gold);
-}
-
-.mobile-nav-drawer {
-  display: block;
-}
-
 /* =========================================================
-   SCROLL STATE
+   MOBILE RESPONSIVE FINE-TUNING
    ========================================================= */
-.header-scrolled {
-  background: var(--clr-maroon-dark);
-  padding: 0.5rem 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+
+/* Extra small phones (320px) */
+@media (max-width: 360px) {
+  .header-logo-image {
+    width: 210px;
+    max-height: 65px;
+  }
 }
 
-@media (max-width: 768px) {
-  .header {
-    background: var(--clr-maroon);
-    padding: 0.5rem 0;
-  }
-  
-  .header-scrolled {
-    background: var(--clr-maroon-dark);
-  }
-
-  .header-container {
-    justify-content: center;
-  }
-
-  .logo {
-    margin: 0 auto;
-  }
-
+/* Standard phones (361-390px) */
+@media (min-width: 361px) and (max-width: 390px) {
   .header-logo-image {
-    width: clamp(220px, 60vw, 300px) !important;
-    max-height: 70px !important;
-    height: auto !important;
+    width: 240px;
+    max-height: 72px;
   }
+}
 
-  .mobile-menu-btn {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+/* Larger phones (391-430px) */
+@media (min-width: 391px) and (max-width: 480px) {
+  .header-logo-image {
+    width: 260px;
+    max-height: 78px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 1023px) {
+  .header-logo-image {
+    width: 280px;
+    max-height: 80px;
   }
 }
 
@@ -295,13 +291,31 @@
    DESKTOP NAVIGATION (1024px+)
    ========================================================= */
 @media (min-width: 1024px) {
-  .desktop-nav {
-    display: block;
+  .header {
+    background-color: var(--clr-maroon);
+    padding: 0.6rem 0;
+  }
+
+  .header.header-scrolled {
+    background-color: rgba(62, 12, 18, 0.96);
+    padding: 0.4rem 0;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0;
   }
 
   .header-logo-image {
     width: 200px;
-    max-height: 50px;
+    max-height: 48px;
+  }
+
+  .desktop-nav {
+    display: block;
   }
   
   .nav-list {

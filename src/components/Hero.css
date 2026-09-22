@@ -4,11 +4,11 @@
 
 .hero {
   position: relative;
-  min-height: calc(100svh - 74px);
+  min-height: 100svh;
   display: flex;
   align-items: flex-start;
   overflow: hidden;
-  padding-top: 90px; /* Offset for sticky header + gap */
+  padding-top: 0; /* Hero extends behind transparent header */
 }
 
 /* Background Image Layers */
@@ -51,7 +51,7 @@
   display: none;
 }
 
-/* Warm, Bright, Devotional Overlay (Not dark/muddy) */
+/* Warm, Devotional Overlay — stronger at top for header/logo readability */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -60,22 +60,23 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(40, 10, 14, 0.78) 0%,
-    rgba(40, 10, 14, 0.58) 42%,
+    rgba(40, 10, 14, 0.85) 0%,
+    rgba(40, 10, 14, 0.70) 15%,
+    rgba(40, 10, 14, 0.55) 42%,
     rgba(40, 10, 14, 0.22) 75%,
     rgba(25, 6, 9, 0.85) 100%
   );
   z-index: 2;
 }
 
-/* Hero Content Container (Normal Flow) */
+/* Hero Content Container — padding-top accounts for transparent header */
 .hero-container {
   position: relative;
   z-index: 3;
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  padding: 1.5rem 1rem 3.5rem;
+  padding: 100px 1rem 3.5rem; /* Top padding clears the header + logo area */
 }
 
 .hero-content {
@@ -300,7 +301,7 @@
 @media (min-width: 1024px) {
   .hero {
     min-height: 800px;
-    padding-top: 86px;
+    padding-top: 0;
     align-items: center;
   }
   
@@ -324,7 +325,7 @@
   }
 
   .hero-container {
-    padding: 3rem 2rem;
+    padding: 100px 2rem 3rem;
   }
 
   .hero-content {

@@ -102,6 +102,17 @@
   margin-bottom: 1.5rem;
 }
 
+.about-specialist-highlight {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--clr-maroon);
+  font-style: italic;
+  border-left: 3px solid var(--clr-gold);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .commitment-box {
   background-color: var(--clr-cream);
   border-radius: 8px;

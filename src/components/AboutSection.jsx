@@ -41,6 +41,10 @@ export default function AboutSection() {
               <p className="experience">16 Years in Purohitham</p>
             </div>
 
+            <p className="about-description about-specialist-highlight">
+              Specialists in performing Shodasakarmantham, Yagna Yaagaas, Marriages and Rituals.
+            </p>
+
             <p className="about-description">
               Welcome to Vaidika Seva, where we bring the sanctity and authenticity of ancient Vedic rituals to your modern life. Rooted deeply in the traditional scriptures, we ensure every ceremony is performed with utmost devotion, precision, and adherence to Vedic procedures.
             </p>
