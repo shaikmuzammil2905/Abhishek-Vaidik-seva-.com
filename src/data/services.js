@@ -1,4 +1,4 @@
-export const servicesData = [
+const rawServices = [
   // =======================================================================
   // CATEGORY 1: HOMAMS (13)
   // =======================================================================
@@ -479,3 +479,6 @@ export const servicesData = [
     preparation: 'Large quantities of pure Kumkum, flowers, and multiple priests/devotees.',
   }
 ];
+
+export const servicesData = [...rawServices].sort((a, b) => a.title.localeCompare(b.title));
+

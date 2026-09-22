@@ -1,23 +1,39 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, MessageCircle, ChevronDown, Sparkles } from 'lucide-react';
+import { ArrowRight, MessageCircle, ChevronDown, Sparkles, CheckCircle } from 'lucide-react';
 import { servicesData } from '../data/services';
 import ServiceModal from './ServiceModal';
 import ServiceContentModal from './ServiceContentModal';
 import './Services.css';
 
 export default function Services() {
+  const [activeCategory, setActiveCategory] = useState('ALL');
   const [modalService, setModalService] = useState(null);
   const [contentModalService, setContentModalService] = useState(null);
   const navigate = useNavigate();
+
+  const categories = [
+    'ALL',
+    'Homams',
+    'Poojas',
+    'Pitru Poojas',
+    'Specialist Vedic Services',
+    'Abhishekams & Special Archanas'
+  ];
+
+  // Filter and ensure alphabetical order (servicesData is already sorted A-Z)
+  const filteredServices = useMemo(() => {
+    if (activeCategory === 'ALL') {
+      return servicesData;
+    }
+    return servicesData.filter(s => s.category === activeCategory);
+  }, [activeCategory]);
 
   const handleDropdownSelect = (e) => {
     const id = e.target.value;
     const service = servicesData.find(s => s.id === id);
     if (service) {
-      const url = `/services/${encodeURIComponent(service.category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}/${service.slug}`;
-      window.open(url, '_blank');
-      // Reset dropdown so the user can select the same option again if needed
+      setContentModalService(service);
       e.target.value = "";
     }
   };
@@ -28,13 +44,13 @@ export default function Services() {
         <div className="text-center">
           <h2 className="section-title animate-fade-up">Our Services</h2>
           <p className="section-subtitle animate-fade-up animate-stagger-1">
-            Complete Vedic Services for Every Occasion
+            Complete Vedic Services for Every Sacred Occasion
           </p>
 
-          {/* Service Selector Dropdown */}
+          {/* Quick Service Selector Dropdown */}
           <div className="services-dropdown-container animate-fade-up animate-stagger-2">
             <label htmlFor="service-select" className="dropdown-label">
-              <Sparkles size={16} className="sparkle-icon" /> Select a Service:
+              <Sparkles size={16} className="sparkle-icon" /> Quick Jump to Service:
             </label>
             <div className="dropdown-select-wrapper">
               <select 
@@ -43,40 +59,71 @@ export default function Services() {
                 onChange={handleDropdownSelect}
                 defaultValue=""
               >
-                <option value="" disabled>-- Choose a Vedic Service --</option>
+                <option value="" disabled>-- Select a Vedic Service (A-Z) --</option>
                 {servicesData.map((s) => (
                   <option key={s.id} value={s.id}>
-                    {s.title}
+                    {s.title} ({s.category})
                   </option>
                 ))}
               </select>
               <ChevronDown size={18} className="select-arrow" />
             </div>
           </div>
+
+          {/* Category Filter Chips */}
+          <div className="services-category-tabs animate-fade-up animate-stagger-3">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`service-tab-btn ${activeCategory === cat ? 'active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
+        {/* Pure Content Services Grid - Alphabetical Order without Images */}
         <div className="services-grid">
-          {servicesData.filter(s => s.featured).map((service, index) => (
+          {filteredServices.map((service, index) => (
             <div 
               key={service.id} 
-              className="service-card card" 
-              style={{ cursor: 'pointer' }}
+              className="service-card text-only-card"
               onClick={() => setContentModalService(service)}
             >
-              <div className="service-card-content">
+              <div className="service-card-header">
+                <span className="service-category-badge">{service.category}</span>
                 <h3 className="service-card-title">{service.title}</h3>
+              </div>
+
+              <div className="service-card-content">
                 <p className="service-card-desc">{service.shortDesc}</p>
+                
+                {service.whatIsIncluded && service.whatIsIncluded.length > 0 && (
+                  <div className="service-card-highlights">
+                    <span className="highlights-label">Includes:</span>
+                    <ul className="highlights-list">
+                      {service.whatIsIncluded.slice(0, 3).map((item, i) => (
+                        <li key={i}>
+                          <CheckCircle size={14} className="highlight-check" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div className="service-card-actions">
                   <button 
                     className="btn btn-secondary btn-sm"
-                    style={{ background: 'none', color: 'var(--clr-gold)', border: '1px solid var(--clr-gold)' }}
                     onClick={(e) => {
                       e.stopPropagation();
                       setContentModalService(service);
                     }}
                   >
                     <span>View Details</span>
-                    <ArrowRight size={16} />
+                    <ArrowRight size={15} />
                   </button>
                   <button
                     className="btn btn-primary btn-sm"
@@ -85,7 +132,7 @@ export default function Services() {
                       setModalService(service);
                     }}
                   >
-                    <MessageCircle size={16} />
+                    <MessageCircle size={15} />
                     <span>Enquire Now</span>
                   </button>
                 </div>
@@ -107,6 +154,7 @@ export default function Services() {
           isOpen={!!contentModalService}
           onClose={() => setContentModalService(null)}
           service={contentModalService}
+          showImage={false}
         />
       )}
     </section>

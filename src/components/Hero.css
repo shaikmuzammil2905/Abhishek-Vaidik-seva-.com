@@ -273,7 +273,7 @@
   }
 
   .hero-content {
-    max-width: 580px;
+    max-width: 650px;
     align-items: flex-start;
     text-align: left;
     gap: 1.1rem;
@@ -283,12 +283,17 @@
     display: flex;
     flex-direction: column;
     font-family: var(--font-serif, 'Playfair Display', serif);
-    font-size: clamp(3.2rem, 4.8vw, 4.5rem);
+    font-size: clamp(2.6rem, 3.8vw, 3.6rem);
     font-weight: 800;
-    line-height: 1.05;
+    line-height: 1.12;
     color: #E6C665;
     margin: 0;
     text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-title-desktop-only .title-word {
+    white-space: nowrap;
+    display: inline-block;
   }
 
   .hero-desc {
