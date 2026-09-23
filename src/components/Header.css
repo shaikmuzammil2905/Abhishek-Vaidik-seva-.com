@@ -35,7 +35,7 @@
   display: block;
   object-fit: contain;
   object-position: center;
-  transform: scale(1.75); /* Increased size of logo in mobile view */
+  transform: scale(1.38); /* Increased size of logo in mobile view */
   transform-origin: center;
 }
 
