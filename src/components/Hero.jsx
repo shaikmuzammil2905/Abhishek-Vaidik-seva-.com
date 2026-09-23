@@ -41,7 +41,7 @@ export default function Hero() {
                 Hari Anjaneya Abhishek Sharma <span className="degree">(B.A.)</span>
               </h4>
               <p className="purohit-univ">Sri Venkateshwara Vedic University (TTD)</p>
-              <p className="purohit-exp">16 Years in Purohitham</p>
+              <p className="purohit-exp">16 Years experience in Purohitham , Specialists in performing Shodasakarmantham, Yagna Yaagaas, Marriages and Rituals.</p>
             </div>
           </div>
 
