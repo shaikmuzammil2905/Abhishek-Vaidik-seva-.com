@@ -3,6 +3,12 @@
   padding: 4.5rem 0;
 }
 
+@media (max-width: 767px) {
+  .services-section.section-padding {
+    padding-top: 0;
+  }
+}
+
 /* Services Dropdown Selector */
 .services-dropdown-container {
   display: flex;
